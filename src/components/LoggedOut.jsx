@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet} from 'react-router-dom';
-import { useNavigate} from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import backgroundImage from "../assets/BckLogin.jpg";
 // import { Button, TextInput, Title, text } from "@mantine/core";
 // import { IconAlertCircle } from "@tabler/icons-react";
@@ -8,8 +8,9 @@ import backgroundImage from "../assets/BckLogin.jpg";
 // import '../app.css'
 
 
-export function Loggedin() {
+export function LoggedOut() {
   const navigate = useNavigate()
+
   const backgroundStyle = {
     height: "100vh",
     width: "100vw",
@@ -19,15 +20,14 @@ export function Loggedin() {
     position: "relative",
   }
 
-  const handleLogin = () => {
-    navigate("/MainPage")
+  const handleLogout = () => {
+    navigate("/HeroPage")
   }
   
   return (
     <> 
        <div>
-      <h1>Logged in</h1>
-      <button onClick={handleLogin}>Log in</button>
+      <button onClick={handleLogout}>Log out</button>
         <Outlet />
       </div>  
       <div style={backgroundStyle}>
@@ -38,4 +38,4 @@ export function Loggedin() {
   )
 }
 
-export default Loggedin;
+export default LoggedOut;

@@ -13,6 +13,7 @@ import Loggedin from "./components/Loggedin.jsx";
 import Register from "./components/Register.jsx"
 import EditDream from "./components/EditDream.jsx";
 import OverviewOfDreams from "./components/OverviewOfDreams.jsx";
+import LoggedOut from "./components/LoggedOut.jsx";
 
 // import './app.css'
 
@@ -52,10 +53,12 @@ export function App() {
       <div>
         <nav>
           <Link to="/">Main Page</Link>
-          <Link to="Loggedin">Přihlásit se</Link>
-          <Link to="Register">Registrovat se</Link>
+          <Link to="HeroPage">Hero Page</Link>
+          {/* <Link to="Loggedin">Přihlásit se</Link>
+          <Link to="Register">Registrovat se</Link> */}
           <Link to="EditDream">Vložit sen</Link>
           <Link to="OverviewOfDreams">Přehled snů</Link>
+          <Link to="LoggedOut">Odhlásit se</Link>
           
         </nav>
         <Outlet />
@@ -70,6 +73,7 @@ export function App() {
                 <Route path="/Register" element={<Register />} />
                 <Route path="/EditDream" element={<EditDream />} />
                 <Route path="/OverviewOfDreams" element={<OverviewOfDreams />} />
+                <Route path="/LoggedOut" element={<LoggedOut />} />
               </Routes>
              </div>      
     </>
