@@ -14,6 +14,7 @@ export function Register() {
   const backgroundStyle = {
     height: "100vh",
     width: "100vw",
+    backgroundSize:"cover",
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -27,8 +28,9 @@ export function Register() {
   return (
     <>
       <div>
-      <h1>Register</h1>
-      <button onClick={handleRegister}>Register</button>
+      <h1>ZALOŽTE SI ÚČET</h1>
+      <h2>OSOBNÍ ÚDAJE</h2>
+      <button onClick={handleRegister}>Vytvořit účet</button>
         <Outlet />
       </div>   
        <div style={backgroundStyle}>

@@ -14,6 +14,7 @@ export function LoggedOut() {
   const backgroundStyle = {
     height: "100vh",
     width: "100vw",
+    backgroundSize:"cover",
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
@@ -21,7 +22,7 @@ export function LoggedOut() {
   }
 
   const handleLogout = () => {
-    navigate("/HeroPage")
+    navigate("/")
   }
   
   return (

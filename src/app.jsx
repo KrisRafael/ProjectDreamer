@@ -44,21 +44,25 @@ export function App() {
   //   }, 
   //   []
   // )
- 
+
   return (
     <>
     <header>
       <h1>Dreamer hero-page</h1>
       </header>
+      {/* <div>
+      <HeroPage />
+      </div> */}
+     
       <div>
         <nav>
-          <Link to="/">Main Page</Link>
-          <Link to="HeroPage">Hero Page</Link>
+          <Link to="/">Hero Page</Link>
+          {/* <Link to="HeroPage">Hero Page</Link> */}
           {/* <Link to="Loggedin">Přihlásit se</Link>
           <Link to="Register">Registrovat se</Link> */}
-          <Link to="EditDream">Vložit sen</Link>
+          {/* <Link to="EditDream">Vložit sen</Link>
           <Link to="OverviewOfDreams">Přehled snů</Link>
-          <Link to="LoggedOut">Odhlásit se</Link>
+          <Link to="LoggedOut">Odhlásit se</Link> */}
           
         </nav>
         <Outlet />
@@ -66,8 +70,8 @@ export function App() {
     {/* <Storage /> */}
              <div>
              <Routes>
-                <Route path="/" element={<Layout />} />
-                <Route index element={<HeroPage />} />
+                {/* <Route path="/" element={<Layout />} /> */}
+                <Route path="/" element={<HeroPage />} />
                 <Route path="/MainPage" element={<MainPage />} />
                 <Route path="/Loggedin" element={<Loggedin />} />
                 <Route path="/Register" element={<Register />} />
