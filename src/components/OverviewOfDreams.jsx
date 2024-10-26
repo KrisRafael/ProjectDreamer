@@ -25,16 +25,6 @@ export function OverviewOfDreams() {
     zIndex: -1
   }
 
-  // const handleMainPage = () => {
-  //   navigate("/MainPage")
-  // }
-  // const handleEditDream = () => {
-  //   navigate("/EditDream")
-  // }
-  // const handleLogOut = () => {
-  //   navigate("/LoggedOut")
-  // }
-  
   return (
     <>
       <div>
@@ -48,11 +38,6 @@ export function OverviewOfDreams() {
           <button onClick={() => navigate("/")}
         className="nav-button">Odhlásit se</button>
         </nav>  
-        {/* <div className="buttonContainer">
-        <button onClick={handleMainPage}>Hlavní stránka</button>
-         <button onClick={handleEditDream}>Vložit sen</button>
-         <button onClick={handleLogOut}>Odhlásit se</button>
-        </div>  */}
          </header>
          <h1>Přehled snů</h1>
         <Outlet />
