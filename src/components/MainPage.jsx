@@ -1,8 +1,6 @@
 import React from "react";
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import backgroundImage from "../assets/BckMainPage2.jpg";
-import { useNavigate } from "react-router-dom";
-
 // import { Button, TextInput, Title, text } from "@mantine/core";
 // import { IconAlertCircle } from "@tabler/icons-react";
 // import { useState } from "react";
@@ -18,26 +16,27 @@ export function MainPage() {
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    position: "relative",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: -1
   }
 
-  const handleEditDream = () => {
-    navigate("/EditDream")
-  }
-  const handleOverview = () => {
-    navigate("/OverviewOfDreams")
-  }
-  const handleLogOut = () => {
-    navigate("/LoggedOut")
-  }
-  
   return (
     <>
       <div> 
+         <header className="header">
+         <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+         <nav className="navbar">
+        <button onClick={() => navigate("/EditDream")}
+        className="nav-button">Vložit sen</button>
+         <button onClick={() => navigate("/OverviewOfDreams")}
+        className="nav-button">Přehled snů</button>
+          <button onClick={() => navigate("/")}
+        className="nav-button">Odhlásit se</button>     
+        </nav>  
+         </header>
          <h1>Main page</h1>
-         <button onClick={handleEditDream}>Vložit sen</button>
-         <button onClick={handleOverview}>Přehled snů</button>
-         <button onClick={handleLogOut}>Odhlásit se</button>
         <Outlet />
       </div>
       <div style={backgroundStyle}>

@@ -18,7 +18,10 @@ export function Register() {
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    position: "relative",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: -1
   }
 
   const handleRegister = () => {
@@ -28,6 +31,9 @@ export function Register() {
   return (
     <>
       <div>
+      <header className="header">
+        <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+      </header>
       <h1>ZALOŽTE SI ÚČET</h1>
       <h2>OSOBNÍ ÚDAJE</h2>
       <button onClick={handleRegister}>Vytvořit účet</button>

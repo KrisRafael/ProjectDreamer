@@ -14,11 +14,14 @@ export function Loggedin() {
   const backgroundStyle = {
     height: "100vh",
     width: "100vw",
-    background:"cover",
+    backgroundSize:"cover",
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    position: "relative",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: -1
   }
 
   const handleLogin = () => {
@@ -28,6 +31,9 @@ export function Loggedin() {
   return (
     <> 
        <div>
+       <header className="header">
+        <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+      </header>
       <h1>PŘIHLÁSIT SE KE SVÉMU ÚČTU</h1>
       <button onClick={handleLogin}>Přihlásit se</button>
       <p>Zapomněli jste heslo?</p>

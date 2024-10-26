@@ -19,26 +19,42 @@ export function OverviewOfDreams() {
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    position: "relative",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: -1
   }
 
-  const handleMainPage = () => {
-    navigate("/MainPage")
-  }
-  const handleEditDream = () => {
-    navigate("/EditDream")
-  }
-  const handleLogOut = () => {
-    navigate("/LoggedOut")
-  }
+  // const handleMainPage = () => {
+  //   navigate("/MainPage")
+  // }
+  // const handleEditDream = () => {
+  //   navigate("/EditDream")
+  // }
+  // const handleLogOut = () => {
+  //   navigate("/LoggedOut")
+  // }
   
   return (
     <>
       <div>
-        <h1>Přehled snů</h1>
-         <button onClick={handleMainPage}>Hlavní stránka</button>
+        <header className="header">
+        <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+        <nav className="navbar">
+        <button onClick={() => navigate("/MainPage")}
+        className="nav-button">Hlavní stránka</button>
+         <button onClick={() => navigate("/EditDream")}
+        className="nav-button">Vložit sen</button>
+          <button onClick={() => navigate("/")}
+        className="nav-button">Odhlásit se</button>
+        </nav>  
+        {/* <div className="buttonContainer">
+        <button onClick={handleMainPage}>Hlavní stránka</button>
          <button onClick={handleEditDream}>Vložit sen</button>
          <button onClick={handleLogOut}>Odhlásit se</button>
+        </div>  */}
+         </header>
+         <h1>Přehled snů</h1>
         <Outlet />
       </div>
       <div style={backgroundStyle}>

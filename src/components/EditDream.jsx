@@ -1,11 +1,11 @@
 import React from "react";
-import { Outlet, Link } from 'react-router-dom';
+import { Outlet, useNavigate } from 'react-router-dom';
 import backgroundImage from "../assets/BckEditDream.jpg";
-import { useNavigate } from "react-router-dom";
+// import LoggedOut from "./LoggedOut";
 // import { Button, TextInput, Title, text } from "@mantine/core";
 // import { IconAlertCircle } from "@tabler/icons-react";
 import { useState } from "react";
-import '../app.css'
+import '../app.css';
 
 
 export function EditDream() {
@@ -18,32 +18,33 @@ export function EditDream() {
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    position: "relative",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: -1
   }
 
-  const handleMainPage = () => {
-    navigate("/EditDream")
-  }
-  const handleOverview = () => {
-    navigate("/OverviewOfDreams")
-  }
-  const handleLogOut = () => {
-    navigate("/LoggedOut")
-  }
-  
   return (
     <>
-      <div>
-        <h1>Edit dream</h1>
-         <button onClick={handleMainPage}>Vložit sen</button>
-         <button onClick={handleOverview}>Přehled snů</button>
-         <button onClick={handleLogOut}>Odhlásit se</button>
-        <Outlet />
-      </div>
-      <div style={backgroundStyle}>
-         <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
-        </h1>
-        </div> 
+     <div>
+     <header className="header">
+      <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+      <nav className="navbar">
+        <button onClick={() => navigate("/MainPage")}
+        className="nav-button">Hlavní stránka</button>
+         <button onClick={() => navigate("/OverviewOfDreams")}
+        className="nav-button">Přehled snů</button>
+          <button onClick={() => navigate("/")}
+        className="nav-button">Odhlásit se</button>
+        </nav>  
+      </header>
+      <h1>Vložit sen</h1>
+     <Outlet />
+   </div>
+   <div style={backgroundStyle}>
+      <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
+     </h1>
+     </div>  
     </>
   )
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Outlet, Link } from 'react-router-dom';
+// import { Outlet, Link } from 'react-router-dom';
 import backgroundImage from "../assets/BckHeroPage2.jpg";
 import { useNavigate } from "react-router-dom";
 // import { Button, TextInput, Title, text } from "@mantine/core";
@@ -18,22 +18,25 @@ export function HeroPage() {
     backgroundImage: `url(${backgroundImage})`,
     backgroundPosition: "center",
     backgroundRepeat: "no-repeat",
-    position: "relative",
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: -1
   }
 
-  const handleLogin = () => {
-    navigate("/Loggedin")
-  }
-  const handleRegister = () => {
-    navigate("/Register")
-  }
-  
   return (
     <>
       <div>
-         <button onClick={handleLogin}>Přihlásit se</button>
-         <button onClick={handleRegister}>Registrovat se</button>
-        <Outlet />
+       <header className="header">
+        <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+        <nav className="navbar">
+        <button onClick={() => navigate("/Loggedin")}
+        className="nav-button">Přihlásit se</button>
+         <button onClick={() => navigate("/Register")}
+        className="nav-button">Registrovat se</button>
+        </nav>  
+        {/* <Outlet /> */}
+        </header>
       </div>
 
       <div style={backgroundStyle}>

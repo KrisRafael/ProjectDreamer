@@ -5,17 +5,14 @@ import React from "react";
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import { useForm } from "@mantine/form";
 import { useState } from "react";
+import "./App.css"
 
-import Layout from "./components/Layout.jsx";
 import HeroPage from "./components/HeroPage.jsx";
 import MainPage from "./components/MainPage.jsx";
 import Loggedin from "./components/Loggedin.jsx";
 import Register from "./components/Register.jsx"
 import EditDream from "./components/EditDream.jsx";
 import OverviewOfDreams from "./components/OverviewOfDreams.jsx";
-import LoggedOut from "./components/LoggedOut.jsx";
-
-// import './app.css'
 
 // import { supabase } from "./Supabase.js";
 // import Storage from "Storage";
@@ -47,39 +44,27 @@ export function App() {
 
   return (
     <>
-    <header>
-      <h1>Dreamer hero-page</h1>
-      </header>
-      {/* <div>
-      <HeroPage />
-      </div> */}
-     
       <div>
-        <nav>
-          <Link to="/">Hero Page</Link>
-          {/* <Link to="HeroPage">Hero Page</Link> */}
-          {/* <Link to="Loggedin">Přihlásit se</Link>
-          <Link to="Register">Registrovat se</Link> */}
-          {/* <Link to="EditDream">Vložit sen</Link>
-          <Link to="OverviewOfDreams">Přehled snů</Link>
-          <Link to="LoggedOut">Odhlásit se</Link> */}
-          
-        </nav>
+
         <Outlet />
       </div>
     {/* <Storage /> */}
              <div>
              <Routes>
-                {/* <Route path="/" element={<Layout />} /> */}
                 <Route path="/" element={<HeroPage />} />
                 <Route path="/MainPage" element={<MainPage />} />
                 <Route path="/Loggedin" element={<Loggedin />} />
                 <Route path="/Register" element={<Register />} />
                 <Route path="/EditDream" element={<EditDream />} />
                 <Route path="/OverviewOfDreams" element={<OverviewOfDreams />} />
-                <Route path="/LoggedOut" element={<LoggedOut />} />
               </Routes>
-             </div>      
+             </div>   
+
+          <div className="App">
+            <footer className="footer">
+             <p style={{fontWeight: "bold", fontSize: "13px", color: "dodgerblue", marginLeft: "25px"}}>© 2024 Copyright by Kris</p>
+            </footer>
+          </div>
     </>
   )
 }
