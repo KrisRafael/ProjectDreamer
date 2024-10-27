@@ -24,31 +24,31 @@ export function MainPage() {
 
   return (
     <>
-      <div> 
-         <header className="header">
-         <div className="circle-container">
-            <div className="circle">
-          <h1>DREAMER</h1>
-          {/* <p>Create your dream</p> */}
+    <div> 
+      <header className="header">
+        <div className="circle-container">
+          <div className="circle">
+           <h1>DREAMER</h1>
+           {/* <p>Create your dream</p> */}
         </div>
-          </div>
+    </div>
          {/* <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p> */}
-         <nav className="navbar">
+      <nav className="navbar">
         <button onClick={() => navigate("/EditDream")}
-        className="nav-button">VLOŽIT SEN</button>
-         <button onClick={() => navigate("/OverviewOfDreams")}
-        className="nav-button">PŘEHLED SNŮ</button>
-          <button onClick={() => navigate("/")}
-        className="nav-button">ODHLÁSIT SE</button>     
-        </nav>  
-         </header>
+         className="nav-button">VLOŽIT SEN</button>
+        <button onClick={() => navigate("/OverviewOfDreams")}
+         className="nav-button">PŘEHLED SNŮ</button>
+        <button onClick={() => navigate("/")}
+         className="nav-button">ODHLÁSIT SE</button>     
+      </nav>  
+      </header>
          <h1>Main page</h1>
-        <Outlet />
-      </div>
+          <Outlet />
+    </div>
       <div style={backgroundStyle}>
          <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
-        </h1>
-        </div> 
+         </h1>
+      </div> 
     </>
   )
 }
