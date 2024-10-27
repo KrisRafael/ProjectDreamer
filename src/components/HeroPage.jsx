@@ -28,12 +28,18 @@ export function HeroPage() {
     <>
       <div>
        <header className="header">
-        <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+          <div className="circle-container">
+            <div className="circle">
+               <h1>DREAMER</h1>
+               {/* <p>Create your dream</p> */}
+            </div>
+          </div>
+        {/* <h1 style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</h1> */}
         <nav className="navbar">
         <button onClick={() => navigate("/Loggedin")}
-        className="nav-button">Přihlásit se</button>
+        className="nav-button">PŘIHLÁSIT SE</button>
          <button onClick={() => navigate("/Register")}
-        className="nav-button">Registrovat se</button>
+        className="nav-button">REGISTROVAT SE</button>
         </nav>  
         {/* <Outlet /> */}
         </header>

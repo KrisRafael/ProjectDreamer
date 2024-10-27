@@ -30,14 +30,20 @@ export function Loggedin() {
   
   return (
     <> 
-       <div>
-       <header className="header">
-        <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+      <div>
+        <header className="header">
+          <div className="circle-container">
+            <div className="circle">
+              <h1>DREAMER</h1>
+               {/* <p>Create your dream</p> */}
+            </div>
+          </div>
+        {/* <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p> */}
       </header>
-      <h1>PŘIHLÁSIT SE KE SVÉMU ÚČTU</h1>
-      <button onClick={handleLogin}>Přihlásit se</button>
-      <p>Zapomněli jste heslo?</p>
-      <p>Zapamatovat si mě</p>
+        <h1>PŘIHLÁSIT SE KE SVÉMU ÚČTU</h1>
+          <button onClick={handleLogin}>Přihlásit se</button>
+          <p>Zapomněli jste heslo?</p>
+        <p>Zapamatovat si mě</p>
 
         <Outlet />
       </div>  

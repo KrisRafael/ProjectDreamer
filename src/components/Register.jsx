@@ -30,19 +30,25 @@ export function Register() {
   
   return (
     <>
-      <div>
+    <div>
       <header className="header">
-        <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+        <div className="circle-container">
+          <div className="circle">
+           <h1>DREAMER</h1>
+            {/* <p>Create your dream</p> */}
+          </div>
+        </div>
+        {/* <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p> */}
       </header>
-      <h1>ZALOŽTE SI ÚČET</h1>
-      <h2>OSOBNÍ ÚDAJE</h2>
-      <button onClick={handleRegister}>Vytvořit účet</button>
+        <h1>ZALOŽTE SI ÚČET</h1>
+          <h2>OSOBNÍ ÚDAJE</h2>
+          <button onClick={handleRegister}>Vytvořit účet</button>
         <Outlet />
-      </div>   
+    </div>   
        <div style={backgroundStyle}>
          <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
-        </h1>
-        </div> 
+         </h1>
+       </div> 
     </>
   )
 }

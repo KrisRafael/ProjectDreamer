@@ -26,14 +26,20 @@ export function MainPage() {
     <>
       <div> 
          <header className="header">
-         <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p>
+         <div className="circle-container">
+            <div className="circle">
+          <h1>DREAMER</h1>
+          {/* <p>Create your dream</p> */}
+        </div>
+          </div>
+         {/* <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p> */}
          <nav className="navbar">
         <button onClick={() => navigate("/EditDream")}
-        className="nav-button">Vložit sen</button>
+        className="nav-button">VLOŽIT SEN</button>
          <button onClick={() => navigate("/OverviewOfDreams")}
-        className="nav-button">Přehled snů</button>
+        className="nav-button">PŘEHLED SNŮ</button>
           <button onClick={() => navigate("/")}
-        className="nav-button">Odhlásit se</button>     
+        className="nav-button">ODHLÁSIT SE</button>     
         </nav>  
          </header>
          <h1>Main page</h1>
