@@ -1,11 +1,13 @@
 import React from "react";
-import { Outlet} from 'react-router-dom';
-import { useNavigate} from "react-router-dom"
-import backgroundImage from "../assets/BckRegister.jpg";
+import { Outlet } from 'react-router-dom';
+import { useNavigate } from "react-router-dom"
+import backgroundImage from "../../assets/BckRegister.jpg";
 // import { Button, TextInput, Title, text } from "@mantine/core";
 // import { IconAlertCircle } from "@tabler/icons-react";
 // import { useState } from "react";
-// import '../app.css'
+import classes from "./Register.module.css";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 
 export function Register() {
@@ -30,16 +32,8 @@ export function Register() {
   
   return (
     <>
+    <Header />
     <div>
-      <header className="header">
-        <div className="circle-container">
-          <div className="circle">
-           <h1>DREAMER</h1>
-            {/* <p>Create your dream</p> */}
-          </div>
-        </div>
-        {/* <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p> */}
-      </header>
         <h1>ZALOŽTE SI ÚČET</h1>
           <h2>OSOBNÍ ÚDAJE</h2>
           <button onClick={handleRegister}>Vytvořit účet</button>
@@ -49,6 +43,7 @@ export function Register() {
          <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
          </h1>
        </div> 
+       <Footer />
     </>
   )
 }

@@ -1,11 +1,13 @@
 import React from "react";
 import { Outlet, useNavigate } from 'react-router-dom';
-import backgroundImage from "../assets/BckEditDream.jpg";
+import backgroundImage from "../../assets/BckEditDream.jpg";
 // import LoggedOut from "./LoggedOut";
 // import { Button, TextInput, Title, text } from "@mantine/core";
 // import { IconAlertCircle } from "@tabler/icons-react";
 import { useState } from "react";
-import '../app.css';
+import classes from "./EditDream.module.css";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 
 export function EditDream() {
@@ -24,33 +26,39 @@ export function EditDream() {
     zIndex: -1
   }
 
+  const buttons = [
+    { label: "HLAVNÍ STRÁNKA", onClick: () => navigate("/MainPage") },
+    { label: "PŘEHLED SNŮ", onClick: () => navigate("/OverviewOfDreams") },
+    { label: "ODHLÁSIT SE", onClick: () => navigate("/") },
+  ]
+
   return (
     <>
-     <div>
-     <header className="header">
-         <div className="circle-container">
-            <div className="circle">
-             <h1>DREAMER</h1>
-              {/* <p>Create your dream</p> */}
-           </div>
-         </div>
-      {/* <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p> */}
-      <nav className="navbar">
+    <Header />
+     <Header buttons={buttons} />
+       <div style={backgroundStyle}>
+         <h1>VLOŽIT SEN</h1>
+        <Outlet />
+      </div>
+      <Footer />
+
+     {/* <div>
+      <nav className={classes.navbar}>
         <button onClick={() => navigate("/MainPage")}
-        className="nav-button">HLAVNÍ STRÁNKA</button>
+        className={classes.navButton}>HLAVNÍ STRÁNKA</button>
          <button onClick={() => navigate("/OverviewOfDreams")}
-        className="nav-button">PŘEHLED SNŮ</button>
+        className={classes.navButton}>PŘEHLED SNŮ</button>
           <button onClick={() => navigate("/")}
-        className="nav-button">ODHLÁSIT SE</button>
+        className={classes.navButton}>ODHLÁSIT SE</button>
         </nav>  
-      </header>
+
       <h1>Vložit sen</h1>
      <Outlet />
    </div>
    <div style={backgroundStyle}>
       <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
      </h1>
-     </div>  
+     </div>   */}
     </>
   )
 }

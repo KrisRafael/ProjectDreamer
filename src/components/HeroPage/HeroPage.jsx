@@ -1,12 +1,13 @@
 import React from "react";
 // import { Outlet, Link } from 'react-router-dom';
-import backgroundImage from "../assets/BckHeroPage2.jpg";
+import backgroundImage from "../../assets/BckHeroPage2.jpg";
 import { useNavigate } from "react-router-dom";
 // import { Button, TextInput, Title, text } from "@mantine/core";
 // import { IconAlertCircle } from "@tabler/icons-react";
 // import { useState } from "react";
-import '../app.css'
-
+import classes from "./HeroPage.module.css";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 export function HeroPage() {
   const navigate = useNavigate()
@@ -24,31 +25,34 @@ export function HeroPage() {
     zIndex: -1
   }
 
+  const buttons = [
+    { label: "PŘIHLÁSIT SE", onClick: () => navigate("/Loggedin") },
+    { label: "REGISTROVAT SE", onClick: () => navigate("/Register") },
+  ]
+
   return (
     <>
-      <div>
-       <header className="header">
-          <div className="circle-container">
-            <div className="circle">
-               <h1>DREAMER</h1>
-               {/* <p>Create your dream</p> */}
-            </div>
-          </div>
-        {/* <h1 style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</h1> */}
-        <nav className="navbar">
+    <Header />
+     <Header buttons={buttons} />
+       <div style={backgroundStyle}>
+        <Outlet />
+       </div>
+       <Footer />
+
+      {/* <div>
+        <nav className={classes.navbar}>
         <button onClick={() => navigate("/Loggedin")}
-        className="nav-button">PŘIHLÁSIT SE</button>
+        className={classes.navButton}>PŘIHLÁSIT SE</button>
          <button onClick={() => navigate("/Register")}
-        className="nav-button">REGISTROVAT SE</button>
+        className={classes.navButton}>REGISTROVAT SE</button>
         </nav>  
-        {/* <Outlet /> */}
-        </header>
+        {/* <Outlet /> 
       </div>
 
       <div style={backgroundStyle}>
          <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
         </h1>
-        </div> 
+        </div>  */}
     </>
   )
 }

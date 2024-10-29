@@ -16,14 +16,14 @@
     margin: 8px;
     padding: 10px; 
 }
-.header-container {
+.headerContainer {
     display: flex;
     flex-direction: column;
     margin-left: 5px;
     gap: 10px;
 }
 
-.circle-container{
+.circleContainer{
     display: grid;
     place-items: start;
     padding: 7px;
@@ -48,36 +48,6 @@
     margin: 0;
 }
 
-.navbar {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-.nav-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    /* background-color: #007bff; */
-    background-color: #479ac7;
-    box-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
-    /* border: none; */
-    border: 0.2px solid;
-    border-radius: 5px;
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-}
-.nav-button:hover {
-    /* background-color: aquamarine; */
-    background-color: rgb(83, 157, 167);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-}
-
-@media (max-width: 600px) {
-    .navbar {
-        grid-template-columns: 1fr; 
-    }
-}
 @media (max-width: 600px) {
     .circle {
         height: 120px;
@@ -87,20 +57,3 @@
         font-size: 1.5rem;
     }
 }
-
-.footer {
-    background: rgba(22, 34, 42, 0.85); 
-    background: -webkit-linear-gradient(to right, rgba(58, 96, 115, 0.55), rgba(22, 34, 42, 0.85));  
-    background: linear-gradient(to left, rgba(58, 96, 115, 0.85), rgba(22, 34, 42, 0.85));
-    /* Plná barva */
-    /* background: #16222A;  
-    background: -webkit-linear-gradient(to right, #3A6073, #16222A);  
-    background: linear-gradient(to left, #3A6073, #16222A);  */
-    color: white; 
-    text-align: left; 
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    padding: 3px; 
-} 

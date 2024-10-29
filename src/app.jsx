@@ -5,20 +5,21 @@ import React from "react";
 import { Routes, Route, Outlet, Link } from 'react-router-dom';
 import { useForm } from "@mantine/form";
 import { useState } from "react";
-import "./App.css"
+import Header from "./components/Header/Header.jsx";
+import Footer from "./components/Footer/Footer.jsx";
+// import classes from "./app.module.css";
 
-import HeroPage from "./components/HeroPage.jsx";
-import MainPage from "./components/MainPage.jsx";
-import Loggedin from "./components/Loggedin.jsx";
-import Register from "./components/Register.jsx"
-import EditDream from "./components/EditDream.jsx";
-import OverviewOfDreams from "./components/OverviewOfDreams.jsx";
+import HeroPage from "./components/HeroPage/HeroPage.jsx";
+import MainPage from "./components/MainPage/MainPage.jsx";
+import Loggedin from "./components/Loggedin/Loggedin.jsx";
+import Register from "./components/Register/Register.jsx"
+import EditDream from "./components/EditDream/EditDream.jsx";
+import OverviewOfDreams from "./components/OverviewOfDreams/OverviewOfDreams.jsx";
 
 // import { supabase } from "./Supabase.js";
 // import Storage from "Storage";
 
 export function App() {
-
 
   // const [editor, setEditor] = useState(null) // Supabase
   
@@ -44,13 +45,11 @@ export function App() {
 
   return (
     <>
-      <div>
-
-        <Outlet />
-      </div>
     {/* <Storage /> */}
-             <div>
-             <Routes>
+             
+            <div>
+              <Header />
+              <Routes>
                 <Route path="/" element={<HeroPage />} />
                 <Route path="/MainPage" element={<MainPage />} />
                 <Route path="/Loggedin" element={<Loggedin />} />
@@ -58,13 +57,9 @@ export function App() {
                 <Route path="/EditDream" element={<EditDream />} />
                 <Route path="/OverviewOfDreams" element={<OverviewOfDreams />} />
               </Routes>
-             </div>   
-
-          <div className="App">
-            <footer className="footer">
-             <p style={{fontWeight: "bold", fontSize: "13px", color: "dodgerblue", marginLeft: "25px"}}>© 2024 Copyright by Kris</p>
-            </footer>
-          </div>
+              <Footer />
+            </div>    
+         
     </>
   )
 }

@@ -1,12 +1,13 @@
 import React from "react";
 import { Outlet} from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
-import backgroundImage from "../assets/BckLogin.jpg";
+import backgroundImage from "../../assets/BckLogin.jpg";
 // import { Button, TextInput, Title, text } from "@mantine/core";
 // import { IconAlertCircle } from "@tabler/icons-react";
 // import { useState } from "react";
-// import '../app.css'
-
+import classes from "./Loggedin.module.css";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 export function Loggedin() {
   const navigate = useNavigate()
@@ -30,16 +31,8 @@ export function Loggedin() {
   
   return (
     <> 
+    <Header />
       <div>
-        <header className="header">
-          <div className="circle-container">
-            <div className="circle">
-              <h1>DREAMER</h1>
-               {/* <p>Create your dream</p> */}
-            </div>
-          </div>
-        {/* <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p> */}
-      </header>
         <h1>PŘIHLÁSIT SE KE SVÉMU ÚČTU</h1>
           <button onClick={handleLogin}>Přihlásit se</button>
           <p>Zapomněli jste heslo?</p>
@@ -51,6 +44,7 @@ export function Loggedin() {
         <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
         </h1>
         </div> 
+        <Footer />
     </>     
   )
 }

@@ -1,10 +1,12 @@
 import React from "react";
 import { Outlet, useNavigate } from 'react-router-dom';
-import backgroundImage from "../assets/BckMainPage2.jpg";
+import backgroundImage from "../../assets/BckMainPage2.jpg";
 // import { Button, TextInput, Title, text } from "@mantine/core";
 // import { IconAlertCircle } from "@tabler/icons-react";
 // import { useState } from "react";
-import '../app.css'
+import classes from "./MainPage.module.css";
+import Header from "../Header/Header.jsx";
+import Footer from "../Footer/Footer.jsx";
 
 export function MainPage() {
   const navigate = useNavigate()
@@ -22,33 +24,37 @@ export function MainPage() {
     zIndex: -1
   }
 
+  const buttons = [
+    { label: "VLOŽIT SEN", onClick: () => navigate("/EditDream") },
+    { label: "PŘEHLED SNŮ", onClick: () => navigate("/OverviewOfDreams") },
+    { label: "ODHLÁSIT SE", onClick: () => navigate("/") },
+  ]
+
   return (
     <>
-    <div> 
-      <header className="header">
-        <div className="circle-container">
-          <div className="circle">
-           <h1>DREAMER</h1>
-           {/* <p>Create your dream</p> */}
-        </div>
+    <Header />
+    <Header buttons={buttons} />
+    <div style={backgroundStyle}>
+      <h1>HLAVNÍ STRÁNKA</h1>
+      <Outlet />
     </div>
-         {/* <p style={{fontWeight: "bold", fontSize: "30px", color: "dodgerblue"}}>Dreamer</p> */}
-      <nav className="navbar">
+    <Footer />
+    {/* <div style={backgroundStyle}>
+      <nav className={classes.navbar}>
         <button onClick={() => navigate("/EditDream")}
-         className="nav-button">VLOŽIT SEN</button>
+         className={classes.navButton}>VLOŽIT SEN</button>
         <button onClick={() => navigate("/OverviewOfDreams")}
-         className="nav-button">PŘEHLED SNŮ</button>
+         className={classes.navButton}>PŘEHLED SNŮ</button>
         <button onClick={() => navigate("/")}
-         className="nav-button">ODHLÁSIT SE</button>     
+         className={classes.navButton}>ODHLÁSIT SE</button>     
       </nav>  
-      </header>
          <h1>Main page</h1>
           <Outlet />
-    </div>
-      <div style={backgroundStyle}>
+    </div> */}
+      {/* <div style={backgroundStyle}>
          <h1 style={{color: "white", textAlign: "center", paddingTop: "20%"}}>
          </h1>
-      </div> 
+      </div>  */}
     </>
   )
 }

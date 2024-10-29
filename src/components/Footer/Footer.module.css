@@ -1,0 +1,16 @@
+.footer {
+    background: rgba(22, 34, 42, 0.85); 
+    background: -webkit-linear-gradient(to right, rgba(58, 96, 115, 0.55), rgba(22, 34, 42, 0.85));  
+    background: linear-gradient(to left, rgba(58, 96, 115, 0.85), rgba(22, 34, 42, 0.85));
+    /* Plná barva */
+    /* background: #16222A;  
+    background: -webkit-linear-gradient(to right, #3A6073, #16222A);  
+    background: linear-gradient(to left, #3A6073, #16222A);  */
+    color: white; 
+    text-align: left; 
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 3px; 
+} 
