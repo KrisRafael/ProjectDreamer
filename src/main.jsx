@@ -1,24 +1,34 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { StrictMode } from "react";
-import  { MantineProvider } from "@mantine/core";
-import { BrowserRouter } from 'react-router-dom';
-import '@mantine/core/styles.css';
-import { DatesProvider } from "@mantine/dates";
-import { App } from './app.jsx'
-import './index.css'
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <MantineProvider
-    withGlobalStyles
-    withNormalizeCSS>
-        <DatesProvider>
-          <StrictMode>
-            <BrowserRouter>
-              <App />
-            </BrowserRouter>             
-          </StrictMode>
-        </DatesProvider>
-    </MantineProvider>, 
-);
+import '@mantine/core/styles.css';
+import { MantineProvider } from "@mantine/core";
+
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import App from './App.jsx'
+import HeroPage from "./components/HeroPage/HeroPage.jsx";
+import MainPage from "./components/MainPage/MainPage.jsx";
+import EditDream from "./components/EditDream/EditDream.jsx";
+import OverviewOfDreams from "./components/OverviewOfDreams/OverviewOfDreams.jsx";
+import Login from "./components/Login/Login.jsx";
+import Register from "./components/Register/Register.jsx"
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route index element={<HeroPage />} />
+            <Route path="MainPage" element={<MainPage />} />
+            <Route path="OverviewOfDreams" element={<OverviewOfDreams />} />
+            <Route path="EditDream" element={<EditDream />} />
+            <Route path="Login" element={<Login />} />
+            <Route path="Register" element={<Register />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </MantineProvider>
+  </StrictMode>,
+)
