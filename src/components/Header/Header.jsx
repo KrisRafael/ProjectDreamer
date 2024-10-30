@@ -7,7 +7,7 @@ export function Header() {
 
   // promenna isLoggedIn se bude cist z contextu,
   // ktery bude uchovavat informace o prohlasenem uzivateli
-  const isLoggedIn = true
+  const isLoggedIn = false
   // const {isLoggedIn} = useAuth()
 
   const handleLogout = (e) => {
