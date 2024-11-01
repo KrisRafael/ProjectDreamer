@@ -1,6 +1,8 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 
+import {AuthProvider} from "./context/AuthContext.jsx";
+
 import '@mantine/core/styles.css';
 import { MantineProvider } from "@mantine/core";
 
@@ -15,8 +17,9 @@ import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx"
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <MantineProvider withGlobalStyles withNormalizeCSS>
+<StrictMode>
+ <AuthProvider>
+  <MantineProvider withGlobalStyles withNormalizeCSS>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<App />}>
@@ -30,5 +33,6 @@ createRoot(document.getElementById('root')).render(
         </Routes>
       </BrowserRouter>
     </MantineProvider>
-  </StrictMode>,
+  </AuthProvider>
+</StrictMode>,
 )

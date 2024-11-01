@@ -2,6 +2,8 @@ import {useNavigate} from 'react-router-dom';
 import {useState} from 'react';
 import {Link} from 'react-router-dom';
 
+import {useAuth} from "../../context/AuthContext";
+
 import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckLogin.jpg";
 
@@ -10,17 +12,21 @@ import classes from "./Login.module.css";
 export function Loggedin() {
   const navigate = useNavigate()
 
-  // const handleLogin = () => {
-  //   navigate("/MainPage")
-  // }
-
   const [email, setEmail] = useState('')
-	const [password, setPassword] = useState('')
+  const [password, setPassword] = useState('')
+
+  const {login} = useAuth()
 
 	const handleSubmit = async (e) =>{
 		e.preventDefault()
 		console.log('Prihlasuji...', email, password)
-    navigate("/MainPage")
+		const {error} = login(email, password)
+	
+		if (error) {
+			console.log(error)
+			return 
+		}
+        navigate("/MainPage")
 	}
 
   return (
@@ -29,8 +35,7 @@ export function Loggedin() {
       <div className={classes.container}>
 
       <h1>PŘIHLÁSIT SE KE SVÉMU ÚČTU</h1>
-      {/* <button onClick={handleLogin}>Přihlásit se</button> */}
-      
+    
       <form onSubmit={handleSubmit}>
 
 				<div className="form-field">

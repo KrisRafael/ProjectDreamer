@@ -25,18 +25,8 @@ export function Register() {
 		console.log('Registruji...', email, password, firstName, lastName, age)
     navigate("/MainPage")
 
-    const { data, error } = await supabase.auth.signUp({
-      email,
-      password,
-      options: {
-        data: {
-          firstName,
-          lastName,
-          age,
-        }
-      }
-    });
-  
+	const { data, error } = register(email, password, firstName, lastName, age)
+
     if (!error && data) {
       setMessage("Registrace proběhla úspěšně. Zkontrolujte svůj e-mail a potvrďte svůj účet");
       console.log(data)
