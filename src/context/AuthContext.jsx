@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from "react";
 import { supabase } from "../supabase/supabase";
-
 const AuthContext = createContext({});
 
 export const useAuth = () => useContext(AuthContext)
@@ -28,8 +27,8 @@ async function register(email, password, firstName, lastName, age) {
 }
 
 export function AuthProvider({children}) {
-    const [user, setUser] = useState(null)
-    const [isAuth, setIsAuth] = useState(false)
+    const [user, setUser] = useState(true)
+    const [isAuth, setIsAuth] = useState(true)
 
     useEffect(
         () => {

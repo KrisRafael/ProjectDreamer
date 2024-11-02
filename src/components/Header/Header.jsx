@@ -1,4 +1,5 @@
 import {Link, useNavigate} from 'react-router-dom'
+import {useAuth} from "../../context/AuthContext";
 
 import classes from "./Header.module.css"
 
@@ -7,12 +8,12 @@ export function Header() {
 
   // promenna isLoggedIn se bude cist z contextu,
   // ktery bude uchovavat informace o prohlasenem uzivateli
-  const isLoggedIn = false
-  // const {isLoggedIn} = useAuth()
-
+  const {isAuth, logout} = useAuth()
+  
+  
   const handleLogout = (e) => {
     e.preventDefault()
-
+    logout()
     navigate("/")
   }
 
@@ -27,8 +28,8 @@ export function Header() {
         </div>
         <nav className={classes.navbar}>
           {
-            isLoggedIn
-            ? <>
+            isAuth
+            ? <> 
                 <Link to="/EditDream" className={classes.navButton}>VLOŽIT SEN</Link>
                 <Link to="/OverviewOfDreams" className={classes.navButton}>PŘEHLED SNŮ</Link>
                 <a href="#" onClick={handleLogout} className={classes.navButton}>ODHLÁSIT SE</a>
@@ -37,9 +38,7 @@ export function Header() {
                 <Link to="/Login" className={classes.navButton}>PŘIHLÁSIT SE</Link>
                 <Link to="/Register" className={classes.navButton}>REGISTROVAT SE</Link>
               </>
-
           }
-
         </nav>
       </header>
     </>

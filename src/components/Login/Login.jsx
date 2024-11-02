@@ -45,7 +45,7 @@ export function Loggedin() {
 						value={email}
 						onChange={e => setEmail(e.target.value)}
 					/>
-				</div>
+				</div><br></br>
 
 				<div className="form-field">
 					<label>Heslo</label>

@@ -1,0 +1,16 @@
+
+
+.Card{
+    display: flex;
+    align-items: right;
+    width: 23vw;
+    margin-left: 10px;
+
+}
+
+@media (max-width: 768px) {
+    .Card {
+        height: 50vh;
+        width: 65vw;
+    }
+}

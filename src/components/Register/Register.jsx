@@ -1,6 +1,7 @@
 import {useNavigate} from 'react-router-dom';
 import { useState } from 'react'
-import { supabase } from "../../supabase/supabase";
+// import { supabase } from "../../supabase/supabase";
+import {useAuth} from "../../context/AuthContext";
 
 import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckRegister.jpg";
@@ -8,14 +9,16 @@ import backgroundImage from "../../assets/BckRegister.jpg";
 import classes from "./Register.module.css";
 
 export function Register() {
-  const navigate = useNavigate()
-  const [email, setEmail] = useState('')
+    const navigate = useNavigate()
+    const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
 	const [firstName, setFirstName] = useState('')
 	const [lastName, setLastName] = useState('')
 	const [age, setAge] = useState('')
 
   const [message, setMessage] = useState(null)
+
+  const {register} = useAuth()
 
   const handleSubmit = async (e) =>{
 		e.preventDefault()

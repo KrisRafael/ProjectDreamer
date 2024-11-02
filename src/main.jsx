@@ -1,20 +1,20 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react";
+import { createRoot } from "react-dom/client";
 
 import {AuthProvider} from "./context/AuthContext.jsx";
 
 import '@mantine/core/styles.css';
 import { MantineProvider } from "@mantine/core";
 
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import App from './App.jsx'
+import App from "./App.jsx";
 import HeroPage from "./components/HeroPage/HeroPage.jsx";
 import MainPage from "./components/MainPage/MainPage.jsx";
 import EditDream from "./components/EditDream/EditDream.jsx";
 import OverviewOfDreams from "./components/OverviewOfDreams/OverviewOfDreams.jsx";
 import Login from "./components/Login/Login.jsx";
-import Register from "./components/Register/Register.jsx"
+import Register from "./components/Register/Register.jsx";
 
 createRoot(document.getElementById('root')).render(
 <StrictMode>
