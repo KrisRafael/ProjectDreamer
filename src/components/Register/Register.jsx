@@ -97,6 +97,7 @@ export function Register() {
 				</div><br>
         </br>
         <button className={classes.button} type="submit" >Vytvořit účet</button>
+		<p>přihlásit se <Link to="/Loggedin">Zaregistruj se.</Link></p>
 			</form>
       </div>
     </>

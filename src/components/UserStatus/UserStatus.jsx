@@ -14,11 +14,11 @@ export function UserStatus() {
         {isAuth 
         ? <>
             <p>Přihlášený: {user.user_metadata.firtName} {user.user_metadata.lastName}</p> 
-            <button onClick={logout}>Odhlásit se</button>
+            {/* <button onClick={logout}>Odhlásit se</button> */}
          </>
         : <>
            <p>Jsi odhlášený</p>
-           <button onClick={() => {navigate("/Login")}}>Přihlásit se</button>
+           {/* <button onClick={() => {navigate("/Login")}}>Přihlásit se</button> */}
           </>
         }
 
