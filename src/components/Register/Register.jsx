@@ -2,6 +2,7 @@ import {useNavigate} from 'react-router-dom';
 import { useState } from 'react'
 // import { supabase } from "../../supabase/supabase";
 import {useAuth} from "../../context/AuthContext";
+import {Link} from 'react-router-dom';
 
 import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckRegister.jpg";
@@ -97,7 +98,7 @@ export function Register() {
 				</div><br>
         </br>
         <button className={classes.button} type="submit" >Vytvořit účet</button>
-		<p>přihlásit se <Link to="/Loggedin">Zaregistruj se.</Link></p>
+		<p>Potřebuješ se přihlásit<Link to="/Login">Přihlásit se.</Link></p>
 			</form>
       </div>
     </>
