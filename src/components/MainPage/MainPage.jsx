@@ -2,9 +2,16 @@ import Background from "../Background/Background";
 import backgroundImage from "../../assets/BckMainPage2.jpg";
 import {useNavigate} from 'react-router-dom'
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
+
+import { Accordion, } from '@mantine/core';
+import { ThemeIcon } from '@mantine/core';
+import { IconHeart } from '@tabler/icons-react';
+
+import { Carousel } from '@mantine/carousel';
 // import {useAuth} from "../../context/AuthContext";
 
 import classes from "./MainPage.module.css";
+
 
 export function MainPage() {
   const navigate = useNavigate()
@@ -13,7 +20,20 @@ export function MainPage() {
     e.preventDefault()
     navigate("/EditDream")
   }
-  
+
+  //Custom control label
+  const groceries = [
+    { value: 'Jablka', emoji: '🍏', description: 'Čerstvá jablka, skvělá na svačinu.' },
+    { value: 'Hrozny', emoji: '🍇', description: 'Sladké hrozny plné vitamínů.' },
+    { value: 'Banány', emoji: '🍌', description: 'Banány jsou bohaté na draslík.' },
+  ];
+  const items = groceries.map((item) => (
+    <Accordion.Item key={item.value} value={item.value}>
+      <Accordion.Control icon={item.emoji}>{item.value}</Accordion.Control>
+      <Accordion.Panel>{item.description}</Accordion.Panel>
+    </Accordion.Item>
+  ));
+ 
   return (
     <>
       <Background image={backgroundImage} />
@@ -47,9 +67,32 @@ export function MainPage() {
                Vytvoř svůj sen
             </Button>
     </Card>
-  );
+
+    <Accordion defaultValue="Apples">
+      {items}
+    </Accordion>
+ 
     </>
   )
+}
+
+//Carousel
+export function Demo() {
+  return (
+    <Carousel
+      withIndicators
+      height={200}
+      slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
+      slideGap={{ base: 0, sm: 'md' }}
+      loop
+      align="start"
+    >
+      <Carousel.Slide>1</Carousel.Slide>
+      <Carousel.Slide>2</Carousel.Slide>
+      <Carousel.Slide>3</Carousel.Slide>
+      {/* ...other slides */}
+    </Carousel>
+  );
 }
 
 export default MainPage;

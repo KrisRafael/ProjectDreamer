@@ -8,9 +8,11 @@ import classes from "./App.module.css";
 export function App() {
   return (
     <>
+    <div className={classes.app}>
       <Header />
       <Outlet />
       <Footer />
+    </div>
     </>
   )
 }

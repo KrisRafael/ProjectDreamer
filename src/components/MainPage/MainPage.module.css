@@ -1,5 +1,3 @@
-
-
 .Card{
     display: flex;
     align-items: right;
@@ -13,4 +11,11 @@
         height: 50vh;
         width: 65vw;
     }
+}
+
+/* Carousel card  */
+
+/* Custom control label  */
+.Accordion{
+
 }

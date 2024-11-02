@@ -38,8 +38,16 @@ export function HeroPage() {
                 gradient={{ from: 'dodgerblue', to: 'green' }}
               >
                 si vytvoř
+              </Text>{' '} <br />
+              <Text
+                component="span"
+                inherit
+                variant="gradient"
+                gradient={{ from: 'dodgerblue', to: 'green' }}
+              >
+                 svůj 
               </Text>{' '}
-               svůj sen
+               sen
             </Title>
 
             <Text className={classes.description} mt={30}>
