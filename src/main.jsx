@@ -8,7 +8,7 @@ import { MantineProvider } from "@mantine/core";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import App from "./App_temp.jsx";
+import App from "./App.jsx";
 import HeroPage from "./components/HeroPage/HeroPage.jsx";
 import MainPage from "./components/MainPage/MainPage.jsx";
 import EditDream from "./components/EditDream/EditDream.jsx";
