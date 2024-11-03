@@ -98,6 +98,7 @@ export function Register() {
 				</div><br>
         </br>
         <button className={classes.button} type="submit" >Vytvořit účet</button>
+		<p>Pro dokončení registrace prosím potvrďte svou e-mailovou adresu kliknutím na odkaz, který jsme vám zaslali.</p>
 		<p>Potřebuješ se přihlásit<Link to="/Login">Přihlásit se.</Link></p>
 			</form>
       </div>

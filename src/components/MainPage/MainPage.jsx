@@ -8,7 +8,7 @@ import { ThemeIcon } from '@mantine/core';
 import { IconHeart } from '@tabler/icons-react';
 
 import { Carousel } from '@mantine/carousel';
-// import {useAuth} from "../../context/AuthContext";
+import '@mantine/carousel/styles.css';
 
 import classes from "./MainPage.module.css";
 
@@ -41,7 +41,7 @@ export function MainPage() {
 
       <Card className={classes.Card} shadow="sm" padding="lg" radius="md" withBorder>
       <Card.Section component="a" href="https://mantine.dev/">
-        <Image
+        <Image className={classes.CardEffect}
           src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
           height={160}
           alt="Norway"
@@ -49,16 +49,15 @@ export function MainPage() {
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500}>Norway Fjord Adventures</Text>
+        <Text fw={500}>Sen o místě, kde se zastavil čas</Text>
         {/* <Badge color="pink">On Sale</Badge> */}
       </Group>
 
       <Text size="sm" c="dimmed">
-        With Fjord Tours you can explore more of the magical fjord landscapes with tours and
-        activities on and around the fjords of Norway
+        Zdál se mi nádherný sen, který mi zůstal v mysli ještě dlouho po probuzení. Cestovala jsem v cizí zemi a viděla jsem úchvátnou krajinu, kde byl vzduch tak svěží, překrásné květiny, příroda a divokost barev všude kolem. Jemný vánek lehce čechral nespoutanou divočinou, jako by sama tancovala po mě.
       </Text>
 
-      <Button onClick={handleEditdream}
+      <Button className={classes.CardEffect} onClick={handleEditdream}
               variant="gradient"
               gradient={{ from: 'dodgerblue', to: 'green' }}
               fullWidth mt="md" 
@@ -67,6 +66,41 @@ export function MainPage() {
                Vytvoř svůj sen
             </Button>
     </Card>
+   <div className={classes.CarouseContainer}>
+   <Carousel 
+      withIndicators
+      height={200}
+      slideSize="33.333333%"
+      slideGap="md"
+      loop
+      align="start"
+      slidesToScroll={3}
+    >
+      <Carousel.Slide>
+        <img className={classes.hoverEffect} src="/public/ImagesCarousel/carousel1.jpg" alt="Sen1" 
+        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', margin: '0' }}  />
+        </Carousel.Slide>
+      <Carousel.Slide>
+      <img className={classes.hoverEffect} src="/public/ImagesCarousel/carousel4.jpg" alt="Sen4"
+      style={{ width: '100%', height: '100%', objectFit: 'cover',
+      borderRadius: '8px', margin: '0' }} />
+        </Carousel.Slide>
+      <Carousel.Slide>
+      <img className={classes.hoverEffect} src="/public/ImagesCarousel/carousel2.jpg" alt="Sen2"
+      style={{ width: '100%', height: '100%', objectFit: 'cover',
+      borderRadius: '8px', margin: '0' }} />
+        </Carousel.Slide>
+        <Carousel.Slide>
+      <img className={classes.hoverEffect} src="/public/ImagesCarousel/carousel3.jpg" alt="Sen3"
+      style={{ width: '100%', height: '100%', objectFit: 'cover',
+      borderRadius: '8px', margin: '0' }} />
+        </Carousel.Slide>
+      {/* ...other slides */}
+    </Carousel>
+
+   </div>
+    
+  
 
     <Accordion defaultValue="Apples">
       {items}
@@ -75,24 +109,5 @@ export function MainPage() {
     </>
   )
 }
-
-//Carousel
-export function Demo() {
-  return (
-    <Carousel
-      withIndicators
-      height={200}
-      slideSize={{ base: '100%', sm: '50%', md: '33.333333%' }}
-      slideGap={{ base: 0, sm: 'md' }}
-      loop
-      align="start"
-    >
-      <Carousel.Slide>1</Carousel.Slide>
-      <Carousel.Slide>2</Carousel.Slide>
-      <Carousel.Slide>3</Carousel.Slide>
-      {/* ...other slides */}
-    </Carousel>
-  );
-}
-
 export default MainPage;
+

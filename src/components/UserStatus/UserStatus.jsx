@@ -13,7 +13,7 @@ export function UserStatus() {
 
         {isAuth 
         ? <>
-            <p>Přihlášený: {user.user_metadata.firtName} {user.user_metadata.lastName}</p> 
+            <p>Přihlášený uživatel: {user.user_metadata.firtName} {user.user_metadata.lastName}</p> 
             {/* <button onClick={logout}>Odhlásit se</button> */}
          </>
         : <>
