@@ -4,6 +4,8 @@ import { createRoot } from "react-dom/client";
 import {AuthProvider} from "./context/AuthContext.jsx";
 
 import '@mantine/core/styles.css';
+import '@mantine/tiptap/styles.css';
+
 import { MantineProvider } from "@mantine/core";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";

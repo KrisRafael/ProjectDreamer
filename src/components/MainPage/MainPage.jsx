@@ -4,8 +4,8 @@ import {useNavigate} from 'react-router-dom'
 import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
 
 import { Accordion, } from '@mantine/core';
-import { ThemeIcon } from '@mantine/core';
-import { IconHeart } from '@tabler/icons-react';
+// import { ThemeIcon } from '@mantine/core';
+// import { IconHeart } from '@tabler/icons-react';
 
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
