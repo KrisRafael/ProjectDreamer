@@ -7,6 +7,7 @@ import '@mantine/core/styles.css';
 import { MantineProvider } from "@mantine/core";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthRoute } from "./components/AuthRoute/AuthRoute.jsx";
 
 import App from "./App.jsx";
 import HeroPage from "./components/HeroPage/HeroPage.jsx";
@@ -24,9 +25,13 @@ createRoot(document.getElementById('root')).render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<HeroPage />} />
-            <Route path="MainPage" element={<MainPage />} />
-            <Route path="OverviewOfDreams" element={<OverviewOfDreams />} />
-            <Route path="EditDream" element={<EditDream />} />
+
+            <Route element={<AuthRoute />}>
+             <Route path="MainPage" element={<MainPage />} />
+             <Route path="OverviewOfDreams" element={<OverviewOfDreams />} />
+             <Route path="EditDream" element={<EditDream />} />
+            </Route>
+
             <Route path="Login" element={<Login />} />
             <Route path="Register" element={<Register />} />
           </Route>

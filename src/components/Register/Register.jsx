@@ -1,6 +1,6 @@
 import {useNavigate} from 'react-router-dom';
 import { useState } from 'react'
-// import { supabase } from "../../supabase/supabase";
+
 import {useAuth} from "../../context/AuthContext";
 import {Link} from 'react-router-dom';
 
@@ -17,11 +17,11 @@ export function Register() {
 	const [lastName, setLastName] = useState('')
 	const [age, setAge] = useState('')
 
-  const [message, setMessage] = useState(null)
+    const [message, setMessage] = useState(null)
 
-  const {register} = useAuth()
+    const {register} = useAuth()
 
-  const handleSubmit = async (e) =>{
+    const handleSubmit = async (e) =>{
 		e.preventDefault()
 
     setMessage(null)
