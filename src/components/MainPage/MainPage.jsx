@@ -92,21 +92,21 @@ export function MainPage() {
       slidesToScroll={3}
     >
       <Carousel.Slide>
-        <img className={classes.hoverEffect} src="/public/ImagesCarousel/carousel1.jpg" alt="Sen1" 
+        <img className={classes.hoverEffect} src="/ImagesCarousel/carousel1.jpg" alt="Sen1" 
         style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', margin: '0' }}  />
         </Carousel.Slide>
       <Carousel.Slide>
-      <img className={classes.hoverEffect} src="/public/ImagesCarousel/carousel4.jpg" alt="Sen4"
+      <img className={classes.hoverEffect} src="/ImagesCarousel/carousel4.jpg" alt="Sen4"
       style={{ width: '100%', height: '100%', objectFit: 'cover',
       borderRadius: '8px', margin: '0' }} />
         </Carousel.Slide>
       <Carousel.Slide>
-      <img className={classes.hoverEffect} src="/public/ImagesCarousel/carousel2.jpg" alt="Sen2"
+      <img className={classes.hoverEffect} src="/ImagesCarousel/carousel2.jpg" alt="Sen2"
       style={{ width: '100%', height: '100%', objectFit: 'cover',
       borderRadius: '8px', margin: '0' }} />
         </Carousel.Slide>
         <Carousel.Slide>
-      <img className={classes.hoverEffect} src="/public/ImagesCarousel/carousel3.jpg" alt="Sen3"
+      <img className={classes.hoverEffect} src="/ImagesCarousel/carousel3.jpg" alt="Sen3"
       style={{ width: '100%', height: '100%', objectFit: 'cover',
       borderRadius: '8px', margin: '0' }} />
         </Carousel.Slide>
