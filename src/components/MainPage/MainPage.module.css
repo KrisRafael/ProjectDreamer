@@ -1,3 +1,24 @@
+.BodyContainer{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(149, 0, 255);
+    padding: 20px; 
+
+}
+.MainContainer{
+    display: flex;
+    border: 2px solid gold;
+    padding: 20px; 
+    margin-bottom: 50px;
+    /* gap: 20px; */
+}
+
+.CardContainer{
+    display: flex;
+    border: 2px solid orangered;
+    margin-right: 10px
+}
+
 .Card{
     display: flex;
     align-items: right;
@@ -22,9 +43,12 @@
 /* Carousel card  */
 .CarouseContainer{
     display: flex;
+    align-items: centre;
+    justify-content: center;
     height: 30vh;
     width: 80vw;
     border: 2px solid pink;
+    margin-left: 60px
 }
 .hoverEffect {
     transition: filter 0.3s ease;
@@ -36,4 +60,13 @@
 
 
 /* Custom control label  */
+.ContainerLabel{
+    display: flex;
+    align-items: centre;
+    justify-content: center;
+    border: 3px solid white;
+    border-radius: 8px;
+    margin-left: 600px;
+    width: 300px; 
+}
 

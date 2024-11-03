@@ -23,9 +23,12 @@ export function MainPage() {
 
   //Custom control label
   const groceries = [
-    { value: 'Jablka', emoji: '🍏', description: 'Čerstvá jablka, skvělá na svačinu.' },
-    { value: 'Hrozny', emoji: '🍇', description: 'Sladké hrozny plné vitamínů.' },
-    { value: 'Banány', emoji: '🍌', description: 'Banány jsou bohaté na draslík.' },
+    { value: 'Sen o cestě na měsíci', emoji: '🌙', description: 'Snila jsem o cestě na měsíc. Tento sen mě odnesl tak daleko do neznámých a neppoznaných míst, že jsem sotva popadala dech.' },
+    { value: 'Sen o cestování', emoji: '💭', description: 'Cestovala jsem do Indonésie k poznání místní kultury.' },
+    { value: 'Sen o malování', emoji: '🌔', description: 'Malovala jsem na plátno abstraktní mistrovské dílo, které se stalo oslavou barev a tvarů.Každý tah štětce byl pro mě radostí, jako bych vdechovala život do prázdného prostoru.' },
+    { value: 'Sen o horách', emoji: '🌙', description: 'Přijela jsem do nového neznámého města, kolem kterého se rozprostíraly velkolepé hory a společně s přáteli jsme se vydali vstříc jejich strmým stezkám.' },
+    { value: 'Sen o rodině', emoji: '💭', description: 'Přijela kě mě po dlouhé době na návštěvu vzdálená rodina.' },
+    { value: 'Sen o zvířatech', emoji: '🌔', description: 'Snila jsem o farmě, žila jsem tam se spousty zvířaty.' },
   ];
   const items = groceries.map((item) => (
     <Accordion.Item key={item.value} value={item.value}>
@@ -37,10 +40,13 @@ export function MainPage() {
   return (
     <>
       <Background image={backgroundImage} />
-      <h1>Zde začíná tvůj snový zážitek </h1>
+      <div className={classes.BodyContainer}>
+    <h1>Zde začíná tvůj snový zážitek </h1>
 
-      <Card className={classes.Card} shadow="sm" padding="lg" radius="md" withBorder>
-      <Card.Section component="a" href="https://mantine.dev/">
+  <div className={classes.MainContainer} >
+    <div className={classes.CardContainer} >
+       <Card className={classes.Card} shadow="sm" padding="lg" radius="md" withBorder>
+        <Card.Section component="a" href="https://mantine.dev/">
         <Image className={classes.CardEffect}
           src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
           height={160}
@@ -66,6 +72,15 @@ export function MainPage() {
                Vytvoř svůj sen
             </Button>
     </Card>
+    </div>
+   <div className={classes.ContainerLabel}>
+    <Accordion 
+       defaultValue="Apples">
+        {items}
+      </Accordion>
+      </div>
+    </div>
+
    <div className={classes.CarouseContainer}>
    <Carousel 
       withIndicators
@@ -99,13 +114,7 @@ export function MainPage() {
     </Carousel>
 
    </div>
-    
-  
-
-    <Accordion defaultValue="Apples">
-      {items}
-    </Accordion>
- 
+   </div>
     </>
   )
 }
