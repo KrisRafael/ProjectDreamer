@@ -16,7 +16,9 @@
 .CardContainer{
     display: flex;
     border: 2px solid orangered;
-    margin-right: 10px
+    margin-right: 10px;
+    margin-left: 230px;
+    
 }
 
 .Card{
@@ -66,7 +68,7 @@
     justify-content: center;
     border: 3px solid white;
     border-radius: 8px;
-    margin-left: 600px;
-    width: 300px; 
+    margin-left: 110px;
+    width: 23vw;
 }
 
