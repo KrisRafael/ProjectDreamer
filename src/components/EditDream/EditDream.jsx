@@ -56,7 +56,7 @@ export function EditDream() {
       <Background image={backgroundImage} />
      
       <div className={classes.container}>
-        <div className={classes.editorContainer}>TADY VLOŽ SVŮJ SEN
+        <div className={classes.editorContainer}>ZDE VLOŽTE SVŮJ SEN
           <div className={classes.prompt}>
 
       <RichTextEditor editor={editor}>

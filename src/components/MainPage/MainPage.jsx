@@ -63,14 +63,29 @@ export function MainPage() {
         Zdál se mi nádherný sen, který mi zůstal v mysli ještě dlouho po probuzení. Cestovala jsem v cizí zemi a viděla jsem úchvátnou krajinu, kde byl vzduch tak svěží, překrásné květiny, příroda a divokost barev všude kolem. Jemný vánek lehce čechral nespoutanou divočinou, jako by sama tancovala po mě.
       </Text>
 
-      <Button className={classes.CardEffect} onClick={handleEditdream}
-              // variant="gradient"
-              // gradient={{ from: 'dodgerblue', to: 'green' }}
-              // fullWidth mt="md" 
-              // radius="md"
-            >
-               Vytvoř svůj sen
-            </Button>
+      <Button
+  onClick={handleEditdream}
+  variant="gradient"
+  fullWidth
+  mt="md"
+  radius="md"
+  style={{
+    boxShadow: '0 0 9px rgba(255, 255, 255, 0.5)',
+    background: 'linear-gradient(to left, rgba(38, 120, 113, 0.4), rgba(19, 106, 138, 0.8))',
+    borderRadius: '5px',
+    color: 'white',
+  }}
+  onMouseEnter={(e) => {
+    e.currentTarget.style.backgroundImage = 'linear-gradient(15deg, #13547a 0%, #80d0c7 100%)';
+    e.currentTarget.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.5)';
+  }}
+  onMouseLeave={(e) => {
+    e.currentTarget.style.backgroundImage = '';
+    e.currentTarget.style.boxShadow = '0 0 9px rgba(255, 255, 255, 0.5)';
+  }}
+>
+  VYTVOŘ SEN
+</Button>
     </Card>
     </div>
     
