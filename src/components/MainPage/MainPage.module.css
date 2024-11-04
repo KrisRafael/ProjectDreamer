@@ -1,10 +1,19 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .BodyContainer{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     border: 2px solid rgb(149, 0, 255);
     padding: 20px; 
-
+    gap: 60px;
+    
 }
+
 .MainContainer{
     display: flex;
     border: 2px solid gold;
@@ -42,6 +51,18 @@
     filter: brightness(1.1); 
 }
 
+/* Custom control label  */
+.ContainerLabel{
+    display: flex;
+    align-items: centre;
+    justify-content: center;
+    border: 3px solid white;
+    border-radius: 8px;
+    margin-left: 110px;
+    width: 23vw;
+    
+}
+
 /* Carousel card  */
 .CarouseContainer{
     display: flex;
@@ -69,14 +90,4 @@
 } */
 
 
-/* Custom control label  */
-.ContainerLabel{
-    display: flex;
-    align-items: centre;
-    justify-content: center;
-    border: 3px solid white;
-    border-radius: 8px;
-    margin-left: 110px;
-    width: 23vw;
-}
 

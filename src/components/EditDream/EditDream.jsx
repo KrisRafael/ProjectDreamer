@@ -1,5 +1,8 @@
 import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckEditDream.jpg";
+import {useNavigate} from 'react-router-dom'
+
+import { Button } from '@mantine/core';
 
 import { RichTextEditor, Link } from '@mantine/tiptap';
 import { useEditor } from '@tiptap/react';
@@ -11,6 +14,15 @@ import TextAlign from '@tiptap/extension-text-align';
 import classes from "./EditDream.module.css";
 
 export function EditDream() {
+  const navigate = useNavigate()
+
+
+  const handleButton = (e) => {
+    e.preventDefault()
+    navigate("/OverviewOfDreams")
+  }
+
+
   const editor = useEditor({
     extensions: [
       StarterKit,
@@ -20,7 +32,7 @@ export function EditDream() {
       TextAlign.configure({ types: ['heading', 'paragraph'] }),
     ],
     content: `
-      <h2 style="text-align: center;">Welcome to Mantine rich text editor</h2>
+      <h2 style="text-align: center;">Tady můžeš napsat svůj sen</h2>
       <p>
         <code>RichTextEditor</code> component focuses on usability and is designed to be as simple as possible to bring a familiar editing experience to regular users. 
         <code>RichTextEditor</code> is based on 
@@ -42,7 +54,10 @@ export function EditDream() {
   return (
     <>
       <Background image={backgroundImage} />
-      <h1>VLOŽIT SEN</h1>
+     
+      <div className={classes.container}>
+        <div className={classes.editorContainer}>TADY VLOŽ SVŮJ SEN
+          <div className={classes.prompt}>
 
       <RichTextEditor editor={editor}>
         <RichTextEditor.Toolbar sticky stickyOffset={60}>
@@ -90,6 +105,19 @@ export function EditDream() {
 
         <RichTextEditor.Content />
       </RichTextEditor>
+
+      <Button className={classes.Button} onClick={handleButton}
+              variant="gradient"
+              gradient={{ from: 'dodgerblue', to: 'green' }}
+              size="xl"
+              // className={classes.control}
+              mt={40}
+            >
+              Uložit sen
+            </Button>
+       </div>
+       </div>
+      </div>
     </>
   );
 }
