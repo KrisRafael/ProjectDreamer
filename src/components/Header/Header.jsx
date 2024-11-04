@@ -34,6 +34,7 @@ export function Header() {
         <nav className={classes.navbar}>
           {isAuth &&
             <>
+             <Link to="/MainPage" className={classes.navButton}>HLAVNÍ STRÁNKA</Link>
               <Link to="/EditDream" className={classes.navButton}>VLOŽIT SEN</Link>
               <Link to="/OverviewOfDreams" className={classes.navButton}>PŘEHLED SNŮ</Link>
               <a href="#" onClick={handleLogout} className={classes.navButton}>ODHLÁSIT SE</a>
