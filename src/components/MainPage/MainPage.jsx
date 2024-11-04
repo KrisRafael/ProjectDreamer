@@ -64,15 +64,16 @@ export function MainPage() {
       </Text>
 
       <Button className={classes.CardEffect} onClick={handleEditdream}
-              variant="gradient"
-              gradient={{ from: 'dodgerblue', to: 'green' }}
-              fullWidth mt="md" 
-              radius="md"
+              // variant="gradient"
+              // gradient={{ from: 'dodgerblue', to: 'green' }}
+              // fullWidth mt="md" 
+              // radius="md"
             >
                Vytvoř svůj sen
             </Button>
     </Card>
     </div>
+    
    <div className={classes.ContainerLabel}>
     <Accordion 
        defaultValue="Apples">

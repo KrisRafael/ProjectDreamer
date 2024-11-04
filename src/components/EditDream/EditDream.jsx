@@ -106,12 +106,12 @@ export function EditDream() {
         <RichTextEditor.Content />
       </RichTextEditor>
 
-      <Button className={classes.Button} onClick={handleButton}
-              variant="gradient"
-              gradient={{ from: 'dodgerblue', to: 'green' }}
-              size="xl"
+      <Button className={classes.button} onClick={handleButton}
+              // variant="gradient"
+              // gradient={{ from: 'dodgerblue', to: 'green' }}
+              // size="xl"
               // className={classes.control}
-              mt={40}
+              // mt={40}
             >
               Uložit sen
             </Button>

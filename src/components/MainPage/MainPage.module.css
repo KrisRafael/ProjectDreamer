@@ -4,90 +4,100 @@
     box-sizing: border-box;
 }
 
-.BodyContainer{
+.BodyContainer {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    border: 2px solid rgb(149, 0, 255);
     padding: 20px; 
-    gap: 60px;
-    
+    gap: 60px; 
 }
 
-.MainContainer{
+.MainContainer {
     display: flex;
-    border: 2px solid gold;
+    justify-content: center; /* Centrování obsahu */
+    /* border: 1px solid white; */
+    border-radius: 5px;
+    box-shadow: 1 2px 8px white; 
+    background-color: rgba(255, 255, 255, 0.2);
     padding: 20px; 
     margin-bottom: 50px;
-    /* gap: 20px; */
+    z-index: 2;
 }
 
-.CardContainer{
-    display: flex;
-    border: 2px solid orangered;
-    margin-right: 10px;
-    margin-left: 230px;
-    
-}
-
-.Card{
-    display: flex;
-    align-items: right;
-    width: 23vw;
-    margin-left: 10px;
-
-}
 @media (max-width: 768px) {
-    .Card {
-        height: 50vh;
-        width: 65vw;
+    .MainContainer {
+        flex-direction: column;
+        align-items: center; /* Zarovnejte položky na střed */
     }
 }
-.CardEffect {
-    transition: filter 0.3s ease;
-}
-  
-.CardEffect:hover {
-    filter: brightness(1.1); 
+
+.CardContainer {
+    display: flex;
+    justify-content: center; /* Centrování obsahu */
+    align-items: center; /* Uložení na střed */
+    margin-left: 10px; /* Upravte levý okraj pro lepší vzhled */
+    margin-right: 10px;
 }
 
-/* Custom control label  */
-.ContainerLabel{
+.Card {
     display: flex;
-    align-items: centre;
+    align-items: center; /* Upraveno pro vertikální zarovnání */
+    width: 25vw; /* Zvětšení šířky pro větší fotografii */
+    margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .Card {
+        width: 100%; /* Šířka na 100% pro mobil */
+        height: auto; /* Uložení na automatickou výšku */
+    }
+}
+
+.ContainerLabel {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    border: 3px solid white;
+    /* border: 3px solid white; */
     border-radius: 8px;
-    margin-left: 110px;
-    width: 23vw;
-    
+    color: white;
+    font-weight: bold;
+    margin: 10px 0; /* Odstranění mezery z levé i pravé strany */
+    width: 100%; /* Nastavení šířky na 100% */
+    padding: 10px; /* Přidání paddingu pro vyplnění obsahu */
 }
 
-/* Carousel card  */
-.CarouseContainer{
+.CarouseContainer {
     display: flex;
-    align-items: centre;
+    align-items: center;
     justify-content: center;
+    border-radius: 5px;
+    box-shadow: 1 2px 8px white; 
+    background-color: rgba(255, 255, 255, 0.2);
     height: 30vh;
-    width: 80vw;
-    border: 2px solid pink;
-    margin-left: 60px
+    width: 90vw;
+    margin: 20px auto; /* Uplatnění margin auto pro centrování */
 }
-.hoverEffect {
-    transition: filter 0.3s ease;
+
+@media (max-width: 768px) {
+    .CarouseContainer {
+        width: 100%; /* Nastavení šířky na 100% pro mobil */
+        margin: -50px auto; /* Zmenšení mezery pod Carousel */
+        height: auto; /* Zvýšení flexibility pro výšku */
+    }
 }
-  
-.hoverEffect:hover {
-    filter: brightness(1.3); 
+
+/* Zajištění zarovnání na velkých obrazovkách */
+@media (min-width: 769px) {
+    .MainContainer {
+        flex-direction: row; /* Dvě řádky do strany */
+    }
+
+    .CardContainer,
+    .ContainerLabel {
+        margin-left: 10px; /* Upravte mezery mezi kartami */
+        margin-right: 10px; /* Upravte mezery mezi kartami */
+    }
 }
-/* .hoverEffect {
-    transition: transform 0.3s ease, opacity 0.3 ease;
-}
-  
-.hoverEffect:hover {
-    transform: sclae(1.05);
-    opacity: 0.9;
-} */
 
 
 
