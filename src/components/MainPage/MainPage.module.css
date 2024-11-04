@@ -14,7 +14,7 @@
 
 .MainContainer {
     display: flex;
-    justify-content: center; /* Centrování obsahu */
+    justify-content: center; 
     /* border: 1px solid white; */
     border-radius: 5px;
     box-shadow: 1 2px 8px white; 
@@ -27,29 +27,29 @@
 @media (max-width: 768px) {
     .MainContainer {
         flex-direction: column;
-        align-items: center; /* Zarovnejte položky na střed */
+        align-items: center; 
     }
 }
 
 .CardContainer {
     display: flex;
-    justify-content: center; /* Centrování obsahu */
-    align-items: center; /* Uložení na střed */
-    margin-left: 10px; /* Upravte levý okraj pro lepší vzhled */
+    justify-content: center; 
+    align-items: center; 
+    margin-left: 10px; 
     margin-right: 10px;
 }
 
 .Card {
     display: flex;
-    align-items: center; /* Upraveno pro vertikální zarovnání */
-    width: 25vw; /* Zvětšení šířky pro větší fotografii */
+    align-items: center; 
+    width: 25vw; 
     margin-left: 10px;
 }
 
 @media (max-width: 768px) {
     .Card {
-        width: 100%; /* Šířka na 100% pro mobil */
-        height: auto; /* Uložení na automatickou výšku */
+        width: 100%; 
+        height: auto; 
     }
 }
 
@@ -61,9 +61,9 @@
     border-radius: 8px;
     color: white;
     font-weight: bold;
-    margin: 10px 0; /* Odstranění mezery z levé i pravé strany */
-    width: 100%; /* Nastavení šířky na 100% */
-    padding: 10px; /* Přidání paddingu pro vyplnění obsahu */
+    margin: 10px 0; 
+    width: 100%; 
+    padding: 10px; 
 }
 
 .CarouseContainer {
@@ -75,27 +75,26 @@
     background-color: rgba(255, 255, 255, 0.2);
     height: 30vh;
     width: 90vw;
-    margin: 20px auto; /* Uplatnění margin auto pro centrování */
+    margin: 20px auto; 
 }
 
 @media (max-width: 768px) {
     .CarouseContainer {
-        width: 100%; /* Nastavení šířky na 100% pro mobil */
-        margin: -50px auto; /* Zmenšení mezery pod Carousel */
-        height: auto; /* Zvýšení flexibility pro výšku */
+        width: 100%; 
+        margin: -50px auto; 
+        height: auto;
     }
 }
 
-/* Zajištění zarovnání na velkých obrazovkách */
 @media (min-width: 769px) {
     .MainContainer {
-        flex-direction: row; /* Dvě řádky do strany */
+        flex-direction: row; 
     }
 
     .CardContainer,
     .ContainerLabel {
-        margin-left: 10px; /* Upravte mezery mezi kartami */
-        margin-right: 10px; /* Upravte mezery mezi kartami */
+        margin-left: 10px; 
+        margin-right: 10px; 
     }
 }
 
