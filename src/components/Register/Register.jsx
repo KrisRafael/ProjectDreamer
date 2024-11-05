@@ -59,7 +59,7 @@ export function Register() {
 						value={email}
 						onChange={e => setEmail(e.target.value)}
 					/>
-				</div>
+				</div><br></br>
 
 				<div className="form-field">
 					<label>Heslo</label>
@@ -68,7 +68,7 @@ export function Register() {
 						value={password}
 						onChange={e => setPassword(e.target.value)}
 					/>
-				</div>
+				</div><br></br>
 
 				<div className="form-field">
 					<label>Jméno</label>
@@ -77,7 +77,7 @@ export function Register() {
 						value={firstName}
 						onChange={e => setFirstName(e.target.value)}
 					/>
-				</div>
+				</div><br></br>
 
 				<div className="form-field">
 					<label>Příjmení</label>
@@ -86,7 +86,7 @@ export function Register() {
 						value={lastName}
 						onChange={e => setLastName(e.target.value)}
 					/>
-				</div>
+				</div><br></br>
 
 				<div className="form-field">
 					<label>Věk</label>
@@ -97,9 +97,11 @@ export function Register() {
 					/>
 				</div><br>
         </br>
+		<div className={classes.ContainerButton} >
         <button className={classes.button} type="submit" >Vytvořit účet</button>
 		<p>Pro dokončení registrace prosím potvrďte svou e-mailovou adresu kliknutím na odkaz, který jsme vám zaslali.</p>
 		<p>Potřebuješ se přihlásit<Link to="/Login">Přihlásit se.</Link></p>
+		</div>
 			</form>
       </div>
     </>

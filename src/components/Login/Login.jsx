@@ -56,9 +56,11 @@ export function Loggedin() {
 					/>
 				</div><br></br>
 
+				<div className={classes.ContainerButton}>
 				<button className={classes.button} type="submit">Přihlásit se</button>
 
 				<p>Ještě nemáš účet? <Link to="/Register">Zaregistruj se.</Link></p>
+				</div>
 			</form>
       </div>
       <p>Zapomněli jste heslo?</p>
