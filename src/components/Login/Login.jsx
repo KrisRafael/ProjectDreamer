@@ -38,7 +38,7 @@ export function Loggedin() {
     
       <form onSubmit={handleSubmit}>
 
-				<div className="form-field">
+				<div className={classes.formField}>
 					<label>E-mail</label>
 					<input
 						type="email"
@@ -47,7 +47,7 @@ export function Loggedin() {
 					/>
 				</div><br></br>
 
-				<div className="form-field">
+				<div className={classes.formField}>
 					<label>Heslo</label>
 					<input
 						type="password"

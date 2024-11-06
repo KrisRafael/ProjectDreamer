@@ -51,7 +51,7 @@ export function HeroPage() {
             </Title>
 
             <Text className={classes.description} mt={30}>
-              Na těchto webových stránkách si můžeš zapisovat a ukládát své sny, ktetré jsou velmi důžetité pro tvoji osobní analýzu a průběh snění. Najdeš zde také přehled svých snů podle data, pro lepší jasnost nad tvými sny.
+              Na těchto webových stránkách si můžete zapisovat a ukládát své sny, ktetré jsou velmi důžetité pro vaši osobní analýzu a průběh snění. Najdete zde také přehled vašich snů seřazené podle data, pro jasný přehled nad vašimi sny.
             </Text>
 
             <Button onClick={handleRegister}

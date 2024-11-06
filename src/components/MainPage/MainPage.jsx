@@ -20,6 +20,10 @@ export function MainPage() {
     e.preventDefault()
     navigate("/EditDream")
   }
+  const handleButton = (e) => {
+    e.preventDefault()
+    navigate("/OverviewOfDreams")
+  }
 
   //Custom control label
   const groceries = [
@@ -107,27 +111,114 @@ export function MainPage() {
       align="start"
       slidesToScroll={3}
     >
-      <Carousel.Slide>
-        <img className={classes.hoverEffect} src="/ImagesCarousel/carousel1.jpg" alt="Sen1" 
-        style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px', margin: '0' }}  />
-        </Carousel.Slide>
-      <Carousel.Slide>
-      <img className={classes.hoverEffect} src="/ImagesCarousel/carousel4.jpg" alt="Sen4"
-      style={{ width: '100%', height: '100%', objectFit: 'cover',
-      borderRadius: '8px', margin: '0' }} />
-        </Carousel.Slide>
-      <Carousel.Slide>
-      <img className={classes.hoverEffect} src="/ImagesCarousel/carousel2.jpg" alt="Sen2"
-      style={{ width: '100%', height: '100%', objectFit: 'cover',
-      borderRadius: '8px', margin: '0' }} />
-        </Carousel.Slide>
-        <Carousel.Slide>
-      <img className={classes.hoverEffect} src="/ImagesCarousel/carousel3.jpg" alt="Sen3"
-      style={{ width: '100%', height: '100%', objectFit: 'cover',
-      borderRadius: '8px', margin: '0' }} />
-        </Carousel.Slide>
-      {/* ...other slides */}
-    </Carousel>
+  <Carousel.Slide>
+    <div style={{ position: 'relative', height: 200 }}>
+        <img 
+            className={classes.hoverEffect} 
+            src="/ImagesCarousel/carousel1.jpg" 
+            alt="Sen1" 
+            style={{ 
+                width: '100%', 
+                height: '100%', 
+                objectFit: 'cover', 
+                borderRadius: '8px', 
+                margin: '0' 
+            }} 
+        /> 
+        <div className={classes.title}>
+            Název snu
+        </div>
+        <Button 
+            className={classes.button}
+            style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }} 
+            onClick={handleButton}
+        >
+            Otevřít sen
+        </Button>
+    </div>
+  </Carousel.Slide>
+
+  <Carousel.Slide>
+    <div style={{ position: 'relative', height: 200 }}>
+        <img 
+            className={classes.hoverEffect} 
+            src="/ImagesCarousel/carousel4.jpg" 
+            alt="Sen1" 
+            style={{ 
+                width: '100%', 
+                height: '100%', 
+                objectFit: 'cover', 
+                borderRadius: '8px', 
+                margin: '0' 
+            }} 
+        /> 
+        <div className={classes.title}>
+            Název snu
+        </div>
+        <Button 
+            className={classes.button}
+            style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }} 
+            onClick={handleButton}
+        >
+            Otevřít sen
+        </Button>
+    </div>
+  </Carousel.Slide>
+
+  <Carousel.Slide>
+    <div style={{ position: 'relative', height: 200 }}>
+        <img 
+            className={classes.hoverEffect} 
+            src="/ImagesCarousel/carousel2.jpg" 
+            alt="Sen1" 
+            style={{ 
+                width: '100%', 
+                height: '100%', 
+                objectFit: 'cover', 
+                borderRadius: '8px', 
+                margin: '0' 
+            }} 
+        /> 
+        <div className={classes.title}>
+            Název snu
+        </div>
+        <Button 
+            className={classes.button}
+            style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }} 
+            onClick={handleButton}
+        >
+            Otevřít sen
+        </Button>
+    </div>
+  </Carousel.Slide>
+
+  <Carousel.Slide>
+    <div style={{ position: 'relative', height: 200 }}>
+        <img 
+            className={classes.hoverEffect} 
+            src="/ImagesCarousel/carousel3.jpg" 
+            alt="Sen1" 
+            style={{ 
+                width: '100%', 
+                height: '100%', 
+                objectFit: 'cover', 
+                borderRadius: '8px', 
+                margin: '0' 
+            }} 
+        /> 
+        <div className={classes.title}>
+            Název snu
+        </div>
+        <Button 
+            className={classes.button}
+            style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }} 
+            onClick={handleButton}
+        >
+            Otevřít sen
+        </Button>
+    </div>
+  </Carousel.Slide>
+ </Carousel>  
 
    </div>
    </div>

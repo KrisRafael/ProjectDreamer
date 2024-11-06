@@ -52,7 +52,7 @@ export function Register() {
       {message && <p>{message}</p>}
     
       <form onSubmit={handleSubmit}>
-				<div className="form-field">
+				<div className={classes.formField}>
 					<label>E-mail</label>
 					<input
 						type="email"
@@ -61,7 +61,7 @@ export function Register() {
 					/>
 				</div><br></br>
 
-				<div className="form-field">
+				<div className={classes.formField}>
 					<label>Heslo</label>
 					<input
 						type="password"
@@ -70,7 +70,7 @@ export function Register() {
 					/>
 				</div><br></br>
 
-				<div className="form-field">
+				<div className={classes.formField}>
 					<label>Jméno</label>
 					<input
 						type="text"
@@ -79,7 +79,7 @@ export function Register() {
 					/>
 				</div><br></br>
 
-				<div className="form-field">
+				<div className={classes.formField}>
 					<label>Příjmení</label>
 					<input
 						type="text"
@@ -88,7 +88,7 @@ export function Register() {
 					/>
 				</div><br></br>
 
-				<div className="form-field">
+				<div className={classes.formField}>
 					<label>Věk</label>
 					<input
 						type="text"
