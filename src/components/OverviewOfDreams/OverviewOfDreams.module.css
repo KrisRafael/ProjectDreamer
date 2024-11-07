@@ -1,7 +1,26 @@
 .flex {
   display: flex;
   align-items: flex-start;
-  gap: 40px;
+  gap: 55px;
+  flex-wrap: wrap;
+  width: 95vw;
+  height: 80vh;
+  
+  /* position: absolute;  */
+  /* top: 50%; 
+  left: 50%; */
+  /* transform: translate(-50%, -40%); */
+/*  
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; */
+  border-radius: 5px;
+  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0.2);
+  /* height: 60vh;
+  margin: 0;
+  max-width: 730px;
+  width: 100%; */
 }
 
 .nav {
@@ -10,6 +29,9 @@
 
 .detail {
   flex: 1 1 auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 10px rgba(255, 255, 255, 0.8); 
+  background-color: rgba(255, 255, 255, 0.2);
 }
 
 
