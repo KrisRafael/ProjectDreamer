@@ -16,7 +16,7 @@ import HeroPage from "./components/HeroPage/HeroPage.jsx";
 import MainPage from "./components/MainPage/MainPage.jsx";
 import EditDream from "./components/EditDream/EditDream.jsx";
 import OverviewOfDreams from "./components/OverviewOfDreams/OverviewOfDreams.jsx";
-import Overview from "./components/OverviewOfDreams/Overview.jsx";
+import DreamDetail from "./components/OverviewOfDreams/DreamDetail.jsx"
 import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
 
@@ -34,7 +34,7 @@ createRoot(document.getElementById('root')).render(
              <Route path="EditDream" element={<EditDream />} />
 
              <Route path="OverviewOfDreams" element={<OverviewOfDreams />}>
-               <Route path=":overviewId" element={<Overview />} />
+             <Route path=":dreamId" element={<DreamDetail />} />
              </Route>
              
             </Route>

@@ -7,6 +7,19 @@ import {Link} from 'react-router-dom';
 import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckRegister.jpg";
 
+import {
+	TextInput,
+	PasswordInput,
+	Checkbox,
+	Anchor,
+	Paper,
+	Title,
+	Text,
+	Container,
+	Group,
+	Button,
+} from '@mantine/core';
+
 import classes from "./Register.module.css";
 
 export function Register() {
@@ -46,62 +59,59 @@ export function Register() {
       <Background image={backgroundImage} />
       <div className={classes.container}>
 
-      <h1>ZALOŽTE SI ÚČET</h1>
-      <h2>OSOBNÍ ÚDAJE</h2>
-      
+      {/* <h1>ZALOŽTE SI ÚČET</h1>
+      <h2>OSOBNÍ ÚDAJE</h2> */}
+	  <form onSubmit={handleSubmit}>
+
+	  <Container size={500} my={30}>
+	  <Paper withBorder shadow="md" p={28} mt={40} radius="md">
+       <Title align="center" style={{ color: '#006666' }}>
+        Založte si účet 
+      </Title>
+      <Text color="dimmed" size="sm" align="center" mt={5} style={{ color: 'black' }}>
+        Potřebujete se přihlásit?{' '}
+        <Link to="/Login">
+          <Anchor size="sm" style={{ color: 'blue' }}>Přihlásit se.</Anchor>
+        </Link>
+      </Text>
+
       {message && <p>{message}</p>}
-    
-      <form onSubmit={handleSubmit}>
-				<div className={classes.formField}>
-					<label>E-mail</label>
-					<input
-						type="email"
+
+	  
+	  <TextInput label="E-mail" 
+		                type="email"
 						value={email}
-						onChange={e => setEmail(e.target.value)}
-					/>
-				</div><br></br>
+						onChange={e => setEmail(e.target.value)} placeholder="tvujemail@gmail.com" required />
 
-				<div className={classes.formField}>
-					<label>Heslo</label>
-					<input
-						type="password"
+        <PasswordInput label="Heslo" 
+		                type="password"
 						value={password}
-						onChange={e => setPassword(e.target.value)}
-					/>
-				</div><br></br>
+						onChange={e => setPassword(e.target.value)} placeholder="Tvoje heslo" required mt="md" />
 
-				<div className={classes.formField}>
-					<label>Jméno</label>
-					<input
-						type="text"
+		<TextInput label="Jméno" 
+		                type="text"
 						value={firstName}
-						onChange={e => setFirstName(e.target.value)}
-					/>
-				</div><br></br>
+						onChange={e => setFirstName(e.target.value)} placeholder="Jméno" required />
 
-				<div className={classes.formField}>
-					<label>Příjmení</label>
-					<input
-						type="text"
+		<TextInput label="Příjmení" 
+		                type="text"
 						value={lastName}
-						onChange={e => setLastName(e.target.value)}
-					/>
-				</div><br></br>
+						onChange={e => setLastName(e.target.value)} placeholder="Příjmení" required />
 
-				<div className={classes.formField}>
-					<label>Věk</label>
-					<input
-						type="text"
+        <TextInput label="Věk" 
+		                type="text"
 						value={age}
-						onChange={e => setAge(e.target.value)}
-					/>
-				</div><br>
-        </br>
-		<div className={classes.ContainerButton} >
-        <button className={classes.button} type="submit" >Vytvořit účet</button>
-		<p>Pro dokončení registrace prosím potvrďte svou e-mailovou adresu kliknutím na odkaz, který jsme vám zaslali.</p>
-		<p>Potřebuješ se přihlásit<Link to="/Login">Přihlásit se.</Link></p>
-		</div>
+						onChange={e => setAge(e.target.value)} placeholder="Věk" required />
+
+      <div className={classes.text}>
+	  <p>Pro dokončení registrace prosím potvrďte svou e-mailovou adresu kliknutím na odkaz, který jsme vám zaslali.</p>
+	  </div>	
+	
+	  <div className={classes.ContainerButton}>
+        <button className={classes.button} fullWidth mt="xl" type="submit">Registrovat se</button>
+		</div>   
+      </Paper>
+    </Container>
 			</form>
       </div>
     </>

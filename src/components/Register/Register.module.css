@@ -4,28 +4,18 @@
     box-sizing: border-box;
 }
 
-.form-field {
-    display: flex;
-    align-items: baseline;
-    max-width: 350px;
-}
-  
-.form-field label {
-    flex: 0 1 30%;
-    display: block;
-    margin-bottom: 10px;
-}
-  
-.form-field input {
-    flex: 0 1 70%;
-    padding: 5px;
+.title {
+    font-family:
+      Greycliff CF,
+      var(--mantine-font-family);
+    font-weight: 900;
 }
 
 .container{
     position: absolute; 
     top: 50%; 
     left: 50%;
-    transform: translate(-50%, -35%);
+    transform: translate(-48%, -35%);
     display: flex;
     flex-direction: column;
     justify-content: center; 
@@ -33,12 +23,11 @@
     border-radius: 5px;
     box-shadow: 0 1px 10px rgba(255, 255, 255, 0.8); 
     background-color: rgba(255, 255, 255, 0.2);
-    text-align: center;
-    height: 60vh;
+    height: 78vh;
     margin: 0;
-    max-width: 500px;
+    max-width: 670px;
     width: 100%;
-    z-index: 1;
+    /* z-index: 1; */
 } 
 
 .ContainerButton{
@@ -46,8 +35,9 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-
+    margin-top: 13px;
 }
+
 .button {
     display: flex;
     justify-content: center;
@@ -59,14 +49,44 @@
     background: -webkit-linear-gradient(to left, rgba(38, 120, 113, 0.8), rgba(19, 106, 138, 0.8));
     background: linear-gradient(to left, rgba(38, 120, 113, 0.4), rgba(19, 106, 138, 0.8));
     border-radius: 5px; 
-    font-size: 0.95rem;
+    font-size: 1.05rem;
     font-weight: bold;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 2.8rem;
     border: none; 
-    z-index: 2;
+    margin: 5px 70px;
+    white-space: nowrap; 
 }
+
 .button:hover {
     background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     color: white;
 }
+
+.text{
+    display: flex;
+    color: #333333; 
+    font-size: 14px;
+    margin-top: 13px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        align-items: center; 
+    }
+}
+@media (max-width: 768px) {
+    .title {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media (min-width: 769px) {
+    
+    .container,
+    .title {
+        margin-left: 10px; 
+        margin-right: 10px; 
+    }
+} 

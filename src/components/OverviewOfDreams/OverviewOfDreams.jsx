@@ -2,7 +2,7 @@ import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckOverview.jpg";
 import { supabase } from "../../supabase/supabase";
 
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
 import classes from "./OverviewOfDreams.module.css";
@@ -19,7 +19,7 @@ export function OverviewOfDreams() {
     if (err) {
       setError(err)
       return
-    } 
+    }
 
     setOverviews(data)
   }
@@ -46,24 +46,26 @@ export function OverviewOfDreams() {
 
       {error && <p className="text-red-600 mt-5"><strong>CHYBA:</strong><br />{error}</p>}
 
-      <div className="flex gap-6 mt-6">
-        <nav className="bg-sky-100 p-3 w-64 shrink-0">
+      <div className={classes.flex}>
+        <nav className={classes.nav}>
           {
             overviews === null
             ? <p>Načítám data...</p>
-            : <ul>
+            : <ul className={classes.dreamList}>
                 {overviews.map(overview => (
-                  <li key={overview.id} className="border border-b-sky-700">
-                    <Link to={overview.id} className="block p-2">
+                  <li key={overview.id}>
+                    <NavLink to={`${overview.id}`}>
                       {overview.title}
-                    </Link>
+                    </NavLink>
                   </li>
                 ))}
               </ul>
           }
         </nav>
 
-        <Outlet context={{onOverviewUpdate: handleOverviewsUpdate}} />
+        <div className={classes.detail}>
+          <Outlet context={{onOverviewUpdate: handleOverviewsUpdate}} />
+        </div>
       </div>
     </div>
     </>

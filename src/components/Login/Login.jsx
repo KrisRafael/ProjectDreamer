@@ -72,12 +72,6 @@ export function Loggedin() {
 						value={password}
 						onChange={e => setPassword(e.target.value)} placeholder="Tvoje heslo" required mt="md" />
 
-        <Group justify="space-between" mt="lg">
-          <Checkbox label="Zapamatovat si mě" />
-          <Anchor component="button" size="sm">
-            Zapomněli jste heslo?
-          </Anchor>
-        </Group>
 		<div className={classes.ContainerButton}>
         <button className={classes.button} fullWidth mt="xl" type="submit">Přihlásit se</button>
 		</div>   

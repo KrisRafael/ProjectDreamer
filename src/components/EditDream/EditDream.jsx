@@ -19,6 +19,25 @@ import classes from "./EditDream.module.css";
 export function EditDream() {
   const navigate = useNavigate()
   const [title, setTitle] = useState('')
+  const [type, setType] = useState('')
+  const [content, setContent] = useState(`
+    <h2 style="text-align: center;">Tady můžeš napsat svůj sen</h2>
+    <p>
+      <code>RichTextEditor</code> component focuses on usability and is designed to be as simple as possible to bring a familiar editing experience to regular users.
+      <code>RichTextEditor</code> is based on
+      <a href="https://tiptap.dev/" rel="noopener noreferrer" target="_blank">Tiptap.dev</a>
+      and supports all of its features:
+    </p>
+    <ul>
+      <li>General text formatting: <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <s>strike-through</s></li>
+      <li>Headings (h1-h6)</li>
+      <li>Ordered and bullet lists</li>
+      <li>Text align&nbsp;</li>
+      <li>And all
+        <a href="https://tiptap.dev/extensions" target="_blank" rel="noopener noreferrer">other extensions</a>
+      </li>
+    </ul>
+  `)
 
   const theme = createTheme({
     components: {
@@ -27,7 +46,7 @@ export function EditDream() {
           variant: 'filled',
         },
       }),
-  
+
       InputWrapper: Input.Wrapper.extend({
         defaultProps: {
           inputWrapperOrder: ['label', 'input', 'description', 'error'],
@@ -35,31 +54,22 @@ export function EditDream() {
       }),
     },
   });
-  const [content, setContent] = useState(`
-  <h2 style="text-align: center;">Tady můžeš napsat svůj sen</h2>
-  <p>
-    <code>RichTextEditor</code> component focuses on usability and is designed to be as simple as possible to bring a familiar editing experience to regular users. 
-    <code>RichTextEditor</code> is based on 
-    <a href="https://tiptap.dev/" rel="noopener noreferrer" target="_blank">Tiptap.dev</a> 
-    and supports all of its features:
-  </p>
-  <ul>
-    <li>General text formatting: <strong>bold</strong>, <em>italic</em>, <u>underline</u>, <s>strike-through</s></li>
-    <li>Headings (h1-h6)</li>
-    <li>Ordered and bullet lists</li>
-    <li>Text align&nbsp;</li>
-    <li>And all 
-      <a href="https://tiptap.dev/extensions" target="_blank" rel="noopener noreferrer">other extensions</a>
-    </li>
-  </ul>
-`)
 
 
   const handleButton = async (e) => {
     e.preventDefault()
-    const{data, error} = await supabase.from('dreams').insert({content, title})
-    console.log(data,error)
-    // navigate("/OverviewOfDreams")
+    const {error} = await supabase.from('dreams').insert({
+      title,
+      type,
+      content,
+    })
+
+    if (error) {
+      console.log('Chyba pri ukladani:', error)
+      return
+    }
+
+    navigate("/OverviewOfDreams")
   }
 
   const editor = useEditor({
@@ -79,16 +89,18 @@ export function EditDream() {
   return (
     <>
       <Background image={backgroundImage} />
-     
+
       <div className={classes.container}>
         <div className={classes.editorContainer}>ZDE VLOŽTE SVŮJ SEN
           <div className={classes.prompt}>
-      
+
           <MantineProvider theme={theme}>
     <div className={classes.textInput}>
-        <TextInput 
+        <TextInput
             label="NÁZEV SNU:"
             placeholder="Tady napiště název svého snu"
+            value={title}
+            onChange={e => setTitle(e.target.value)}
         />
     </div>
     <div className={classes.textInput}>
@@ -96,6 +108,8 @@ export function EditDream() {
             mt="md"
             label="TYP SNU:"
             data={['Normální sen', 'Živý sen', 'Hezký sen', 'Noční můra', 'Astralní cestování', 'OBE', 'Pocity']}
+            value={type}
+            onChange={e => setType(e.target.value)}
         />
     </div>
 </MantineProvider>

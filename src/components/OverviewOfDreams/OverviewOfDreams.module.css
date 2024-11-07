@@ -1,0 +1,43 @@
+.flex {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.nav {
+  flex: 0 0 300px;
+}
+
+.detail {
+  flex: 1 1 auto;
+}
+
+
+.dreamList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dreamList li {
+  margin: 0;
+  padding: 0;
+}
+
+.dreamList a {
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  background: white;
+  color: navy;
+}
+
+.dreamList a:hover {
+  background: lightcyan;
+}
+
+
+.dreamList a.active {
+  background: navy;
+  color: white;
+}
