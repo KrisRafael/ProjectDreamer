@@ -61,8 +61,29 @@
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     color: white;
 }
-
+/* 
 @media (max-width: 768px) {
+    .container {
+        align-items: center; 
+    }
+}
+@media (max-width: 768px) {
+    .title {
+        width: 100%; 
+        height: auto; 
+    }
+}
+
+@media (min-width: 769px) {
+    
+    .container,
+    .title {
+        margin-left: 10px; 
+        margin-right: 10px; 
+    }
+} */
+
+/* @media (max-width: 768px) {
     .title {
         font-size: 24px; 
         width: 100%; 
@@ -80,4 +101,4 @@
     .ContainerButton {
         margin-top: 8px; 
     }
-}
+} */
