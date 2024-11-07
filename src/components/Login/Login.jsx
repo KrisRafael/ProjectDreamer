@@ -7,6 +7,19 @@ import {useAuth} from "../../context/AuthContext";
 import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckLogin.jpg";
 
+import {
+	TextInput,
+	PasswordInput,
+	Checkbox,
+	Anchor,
+	Paper,
+	Title,
+	Text,
+	Container,
+	Group,
+	Button,
+} from '@mantine/core';
+
 import classes from "./Login.module.css";
 
 export function Loggedin() {
@@ -34,37 +47,44 @@ export function Loggedin() {
       <Background image={backgroundImage} />
       <div className={classes.container}>
 
-      <h1>PŘIHLÁSIT SE KE SVÉMU ÚČTU</h1>
-    
       <form onSubmit={handleSubmit}>
 
-				<div className={classes.formField}>
-					<label>E-mail</label>
-					<input
-						type="email"
+	  <Container size={420} my={40}>
+	  <Paper withBorder shadow="md" p={30} mt={30} radius="md">
+       <Title align="center" style={{ color: '#006666' }}>
+        Vítejte zpět!
+      </Title>
+      <Text color="dimmed" size="sm" align="center" mt={5} style={{ color: 'black' }}>
+        Ještě nemáte účet?{' '}
+        <Link to="/Register">
+          <Anchor size="sm" style={{ color: 'blue' }}>Registrovat se.</Anchor>
+        </Link>
+      </Text>
+
+	  
+        <TextInput label="E-mail" 
+		                type="email"
 						value={email}
-						onChange={e => setEmail(e.target.value)}
-					/>
-				</div><br></br>
+						onChange={e => setEmail(e.target.value)} placeholder="tvujemail@gmail.com" required />
 
-				<div className={classes.formField}>
-					<label>Heslo</label>
-					<input
-						type="password"
+        <PasswordInput label="Heslo" 
+		                type="password"
 						value={password}
-						onChange={e => setPassword(e.target.value)}
-					/>
-				</div><br></br>
+						onChange={e => setPassword(e.target.value)} placeholder="Tvoje heslo" required mt="md" />
 
-				<div className={classes.ContainerButton}>
-				<button className={classes.button} type="submit">Přihlásit se</button>
-
-				<p>Ještě nemáš účet? <Link to="/Register">Zaregistruj se.</Link></p>
-				</div>
+        <Group justify="space-between" mt="lg">
+          <Checkbox label="Zapamatovat si mě" />
+          <Anchor component="button" size="sm">
+            Zapomněli jste heslo?
+          </Anchor>
+        </Group>
+		<div className={classes.ContainerButton}>
+        <button className={classes.button} fullWidth mt="xl" type="submit">Přihlásit se</button>
+		</div>   
+      </Paper>
+    </Container>
 			</form>
       </div>
-      <p>Zapomněli jste heslo?</p>
-      <p>Zapamatovat si mě</p>
     </>
   )
 }

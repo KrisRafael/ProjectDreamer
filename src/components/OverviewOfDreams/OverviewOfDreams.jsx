@@ -1,5 +1,6 @@
 import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckOverview.jpg";
+import { supabase } from "../../supabase/supabase";
 
 import { Outlet, Link } from "react-router-dom";
 import { useState, useEffect } from 'react';
@@ -13,19 +14,15 @@ export function OverviewOfDreams() {
 
 
   async function getOverviews() {
-    try {
-      const response = await fetch('http://localhost:5173/OverviewOfDreams')
-      if (response.ok) {
-        const data = await response.json()
-        setOverviews(data)
-      } else {
-        setError(`${response.status} ${response.statusText}`)
-      }
-    } catch (err) {
-      setError(err.message)
-    }
-  }
+    const{data, err} = await supabase.from('dreams').select()
+   console.log(data,err)
+    if (err) {
+      setError(err)
+      return
+    } 
 
+    setOverviews(data)
+  }
 
   useEffect(
     () => {
@@ -58,8 +55,7 @@ export function OverviewOfDreams() {
                 {overviews.map(overview => (
                   <li key={overview.id} className="border border-b-sky-700">
                     <Link to={overview.id} className="block p-2">
-                      <strong>{overview.title}</strong><br/>
-                      <span className="text-sm text-slate-400">{overview.author}</span>
+                      {overview.title}
                     </Link>
                   </li>
                 ))}
