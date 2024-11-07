@@ -59,8 +59,6 @@ export function Register() {
       <Background image={backgroundImage} />
       <div className={classes.container}>
 
-      {/* <h1>ZALOŽTE SI ÚČET</h1>
-      <h2>OSOBNÍ ÚDAJE</h2> */}
 	  <form onSubmit={handleSubmit}>
 
 	  <Container size={500} my={30}>

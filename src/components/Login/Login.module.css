@@ -27,7 +27,6 @@
     margin: 0;
     max-width: 730px;
     width: 100%;
-    /* z-index: 1; */
 } 
 
 .ContainerButton{
@@ -62,43 +61,33 @@
     color: white;
 }
 
+
 @media (max-width: 768px) {
     .container {
+        width: 95%; 
+        margin: 50px auto; 
+        height: 65vh;
         align-items: center; 
+        justify-content: center;
+        top: 45%; 
+        left: 50%;
     }
 }
+
 @media (max-width: 768px) {
     .title {
+        margin-top: 20vh;
         width: 100%; 
         height: auto; 
+        /* height: 50vh; */
     }
 }
 
-@media (min-width: 769px) {
-    
-    .container,
-    .title {
-        margin-left: 10px; 
-        margin-right: 10px; 
-    }
-} 
-
-/* @media (max-width: 768px) {
-    .title {
-        font-size: 24px; 
-        width: 100%; 
-        height: auto; 
-    }
+@media (max-width: 480px) { 
+    .button{
+    font-size: 14px;
+    padding: 6px 17px;
+    }   
 }
 
-@media (max-width: 480px) {
-    .title {
-        font-size: 20px; 
-        width: 100%; 
-        height: auto; 
-    }
 
-    .ContainerButton {
-        margin-top: 8px; 
-    }
-} */

@@ -19,12 +19,7 @@ export function HeroPage() {
   return (
     <>
       <Background image={backgroundImage} />
-       {/* {isAuth ? (
-          <h2>{user.name}</h2>
-        ) : (
-          <h2></h2>
-        )} */}
-
+     
  <div className={classes.root}>
       <Container size="lg">
         <div className={classes.inner}>

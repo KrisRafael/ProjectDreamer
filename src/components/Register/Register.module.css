@@ -1,7 +1,7 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
 }
 
 .title {
@@ -9,12 +9,14 @@
       Greycliff CF,
       var(--mantine-font-family);
     font-weight: 900;
+    gap: 5rem;
 }
 
 .container{
     position: absolute; 
     top: 50%; 
     left: 50%;
+    /* transform: translate(-50%, -50%); */
     transform: translate(-48%, -35%);
     display: flex;
     flex-direction: column;
@@ -23,12 +25,14 @@
     border-radius: 5px;
     box-shadow: 0 1px 10px rgba(255, 255, 255, 0.8); 
     background-color: rgba(255, 255, 255, 0.2);
-    height: 78vh;
-    margin: 0;
+    height: 75vh;
     max-width: 670px;
-    width: 100%;
-    /* z-index: 1; */
-} 
+    /* width: 100%;
+    gap: 5rem; */
+    width: 90%; 
+    gap: 5rem;
+    padding: 10px; 
+}
 
 .ContainerButton{
     display: flex;
@@ -72,21 +76,42 @@
 
 @media (max-width: 768px) {
     .container {
+        width: 90%; 
+        margin: 50px auto; 
+        height: 75vh;
         align-items: center; 
-    }
-}
-@media (max-width: 768px) {
-    .title {
-        width: 100%; 
-        height: auto; 
+        justify-content: center;
+        top: 45%; 
+        left: 48%;
     }
 }
 
-@media (min-width: 769px) {
-    
-    .container,
-    .title {
-        margin-left: 10px; 
-        margin-right: 10px; 
+/* @media (max-width: 300px) {
+    .container {
+        width: 60%; 
+        margin: 70px auto; 
+        height: 45vh;
+        align-items: center; 
+        justify-content: center;
+        top: 50%; 
+        left: 48%;
     }
-} 
+} */
+
+@media (max-width: 768px) {
+    .title {
+        margin-top: 20vh;
+        width: 100%; 
+        height: auto; 
+        /* height: 50vh; */
+    }
+}
+
+@media (max-width: 480px) { 
+    .button{
+    font-size: 14px;
+    padding: 6px 17px;
+    }   
+}
+
+
