@@ -91,7 +91,9 @@ export function EditDream() {
       <Background image={backgroundImage} />
 
       <div className={classes.container}>
-        <div className={classes.editorContainer}>ZDE VLOŽTE SVŮJ SEN
+        <div className={classes.editorContainer}>
+          <h1 className={classes.spaceMonoBold}> ZDE VLOŽTE SVŮJ SEN</h1>
+         
           <div className={classes.prompt}>
 
           <MantineProvider theme={theme}>
@@ -156,13 +158,7 @@ export function EditDream() {
         <RichTextEditor.Content />
       </RichTextEditor>
 
-      <Button className={classes.button} onClick={handleButton}
-              // variant="gradient"
-              // gradient={{ from: 'dodgerblue', to: 'green' }}
-              // size="xl"
-              // className={classes.control}
-              // mt={40}
-            >
+      <Button className={classes.button} onClick={handleButton}>
               Uložit sen
             </Button>
        </div>

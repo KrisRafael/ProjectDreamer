@@ -1,11 +1,7 @@
 import Background from "../Background/Background";
 import backgroundImage from "../../assets/BckMainPage2.jpg";
 import {useNavigate} from 'react-router-dom'
-import { Card, Image, Text, Badge, Button, Group } from '@mantine/core';
-
-import { Accordion, } from '@mantine/core';
-// import { ThemeIcon } from '@mantine/core';
-// import { IconHeart } from '@tabler/icons-react';
+import { Accordion, Text, Card, Image, Button, Group } from '@mantine/core';
 
 import { Carousel } from '@mantine/carousel';
 import '@mantine/carousel/styles.css';
@@ -45,8 +41,15 @@ export function MainPage() {
     <>
       <Background image={backgroundImage} />
       <div className={classes.BodyContainer}>
-    <h1>Zde začíná tvůj snový zážitek </h1>
-
+    
+    <div>
+    <Text className={classes.gradientText}
+    >
+      <h1 className={classes.spaceMonoBold}>
+        ZDE ZAČÍNÁ TVŮJ SNOVÝ ZÁŽITEK</h1>
+    </Text>
+    </div>
+    
   <div className={classes.MainContainer} >
     <div className={classes.CardContainer} >
        <Card className={classes.Card} shadow="sm" padding="lg" radius="md" withBorder>

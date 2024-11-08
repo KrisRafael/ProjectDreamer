@@ -5,6 +5,8 @@ import { supabase } from "../../supabase/supabase";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
+import { Accordion } from '@mantine/core';
+
 import classes from "./OverviewOfDreams.module.css";
 
 export function OverviewOfDreams() {
@@ -38,11 +40,14 @@ export function OverviewOfDreams() {
   return (
     <>
       <Background image={backgroundImage} />
-       <h1>PŘEHLED SNŮ</h1>
-
-       <div className="p-5">
-      <h2 className="text-2xl font-bold mb-3">Přehled snů</h2>
-      <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, quidem officia? Officia officiis aliquam optio. Odit suscipit repellendus minima minus.</p>
+      <div className={classes.mainContainer}>
+       <div className={classes.description}>
+       <div className={classes.gradientText}>
+    <h1 className={classes.spaceMonoBold}>PŘEHLED SNŮ</h1>
+    <p className={classes.spaceMonoBold}>PRO ZOBRAZENÍ CELÉHO SNU, KLIKNI NA SEN.</p>
+</div>
+{/* <p className={classes.spaceMonoBold}>PRO ZOBRAZENÍ CELÉHO SNU, KLIKNI NA SEN.</p>
+             */}
 
       {error && <p className="text-red-600 mt-5"><strong>CHYBA:</strong><br />{error}</p>}
 
@@ -68,6 +73,7 @@ export function OverviewOfDreams() {
         </div>
       </div>
     </div>
+  </div>
     </>
   )
 }
