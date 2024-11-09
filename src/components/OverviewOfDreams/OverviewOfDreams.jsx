@@ -46,8 +46,6 @@ export function OverviewOfDreams() {
     <h1 className={classes.spaceMonoBold}>PŘEHLED SNŮ</h1>
     <p className={classes.spaceMonoBold}>PRO ZOBRAZENÍ CELÉHO SNU, KLIKNI NA SEN.</p>
 </div>
-{/* <p className={classes.spaceMonoBold}>PRO ZOBRAZENÍ CELÉHO SNU, KLIKNI NA SEN.</p>
-             */}
 
       {error && <p className="text-red-600 mt-5"><strong>CHYBA:</strong><br />{error}</p>}
 

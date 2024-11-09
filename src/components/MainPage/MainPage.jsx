@@ -3,8 +3,8 @@ import backgroundImage from "../../assets/BckMainPage2.jpg";
 import {useNavigate} from 'react-router-dom'
 import { Accordion, Text, Card, Image, Button, Group } from '@mantine/core';
 
-import { Carousel } from '@mantine/carousel';
-import '@mantine/carousel/styles.css';
+// import { Carousel } from '@mantine/carousel';
+// import '@mantine/carousel/styles.css';
 
 import classes from "./MainPage.module.css";
 
@@ -42,7 +42,7 @@ export function MainPage() {
       <Background image={backgroundImage} />
       <div className={classes.BodyContainer}>
     
-    <div>
+    {/* <div> */}
     <Text className={classes.gradientText}
     >
       <h1 className={classes.spaceMonoBold}>
@@ -102,8 +102,8 @@ export function MainPage() {
         {items}
       </Accordion>
       </div>
-    </div>
 
+    {/* </div>
    <div className={classes.CarouseContainer}>
    <Carousel 
       withIndicators
@@ -223,7 +223,7 @@ export function MainPage() {
   </Carousel.Slide>
  </Carousel>  
 
-   </div>
+   </div> */}
    </div>
     </>
   )

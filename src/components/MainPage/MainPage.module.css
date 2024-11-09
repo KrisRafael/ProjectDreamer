@@ -150,13 +150,13 @@ body {
     }
 }
 
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
     .CarouseContainer {
         width: 100%; 
         margin: -50px auto; 
         height: auto;
     }
-}
+} */
 
 @media (min-width: 769px) {
     .MainContainer {
