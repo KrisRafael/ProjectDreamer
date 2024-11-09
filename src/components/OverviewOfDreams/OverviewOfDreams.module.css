@@ -11,7 +11,7 @@
 }
 
 .gradientText {
-  margin-top: 13px;
+  margin-top: 1em;
   font-size: 1.2em; 
   font-family: 'YourCustomFont', sans-serif; 
   font-weight: 800; 
@@ -19,14 +19,15 @@
   -webkit-background-clip: text; 
   -webkit-text-fill-color: transparent; 
   display: inline-block; 
-  margin: 8px 40px;
+  margin: 0.5% 4%;
 }
 
 .mainContainer{
   display: flex;
+  flex-direction: row; 
   margin: 0px;
-  width: 85vw;
-  height: 130vh;
+  width: 85%;
+  height: 85%;
 }
 .description{
   display: flex;
@@ -49,8 +50,8 @@
   align-items: flex-start;
   flex-wrap: wrap;
   width: 95vw;
-  height: 120vh;
-  margin-top: 70px;
+  height: 89vh;
+  margin-top: 3em;
   border-radius: 5px;
   box-shadow: 1 2px 8px white; 
   background-color: rgba(255, 255, 255, 0.2);
@@ -59,6 +60,7 @@
 .nav {
   flex: 0 0 300px;  
   height: 95vh;
+  margin: 0.5% 1%;
 }
 
 /* .detail {
@@ -68,13 +70,13 @@
 
 .dreamList {
   list-style: none;
-  margin: 10px;
+  margin: 20px;
   padding: 10px 10px;
   color: rgb(46, 7, 109);  
 }
 
 .dreamList li {
-  margin: 6px 30px;
+  margin: 0.5em 0.5em;
   border-bottom: 1px solid white;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
   border-radius: 5px; 
@@ -85,7 +87,7 @@
 
 .dreamList a {
   display: block;
-  padding: 10px 20px;
+  padding: 0.7em 0.3em;
   gap: 5px;
   box-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
   text-decoration: none; 
@@ -108,26 +110,33 @@
     flex-direction: column; 
     height: auto; 
     width: auto;
+    padding: 0.2em;
   }
 
   .flex {
+    width: 95%;
     height: auto; 
-    padding: 10px;
+    padding: 0.8em;
+    /* margin-right: 4.8em; */
+    align-items: center;
   }
 
   .nav {
     flex: 0 0 auto; 
     height: auto; 
     margin-bottom: 20px; 
-    padding: 40px;
+    align-items: center;
+    /* padding: 1em; */
+    
   }
 
   .description {
-    width: 95vw; 
+    width: 95%; 
+    height: auto;
     margin: 10px;
     text-align: center;
-    height: 18vh;
     padding: 50px 5px;
+    white-space: wrap;
   }
 
   .gradientText {
@@ -137,41 +146,11 @@
 
   .dreamList li {
     margin: 6px 10px; 
+   
   }
 
   .dreamList a {
     padding: 8px 15px; 
   }
 }
-
-/* @media (max-width: 768px) {
-  .gradientText {
-      font-size: 24px; 
-  }
-  
-  .mainContainer{
-    display: flex;
-    margin: 0px;
-    width: 50vw;
-    height: 80vh;
-  }
-
-  .description{
-    width: 85vw;
-    height: 15vh;
-    flex-direction: column;
-    margin: 25px;
-  }
-
-  .flex {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 85vw;
-    height: 70vh;
-    margin-top: 70px;
-    padding: 10px;
-
-  }
-} */
 

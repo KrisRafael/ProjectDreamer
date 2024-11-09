@@ -64,7 +64,7 @@ export function OverviewOfDreams() {
           }
         </nav>
 
-        <div className={classes.spaceMonoRegular} style={{ margin: "22px", flex: "1 1 auto" }}>
+        <div className={classes.spaceMonoRegular} style={{ margin: "44px", flex: "1 1 auto" }}>
           <Outlet context={{onOverviewUpdate: handleOverviewsUpdate}} />
         </div>
       </div>
