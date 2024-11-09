@@ -16,10 +16,10 @@ export function MainPage() {
     e.preventDefault()
     navigate("/EditDream")
   }
-  const handleButton = (e) => {
-    e.preventDefault()
-    navigate("/OverviewOfDreams")
-  }
+  // const handleButton = (e) => {
+  //   e.preventDefault()
+  //   navigate("/OverviewOfDreams")
+  // }
 
   //Custom control label
   const groceries = [

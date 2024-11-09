@@ -5,7 +5,6 @@
 }
 
 .root {
-  /* background-color: #11284b; */
   overflow: hidden;
   background-size: cover;
   background-position: center;
@@ -61,7 +60,6 @@
 }
   
 .description {
- 
   /* margin-top: 20px;  */
   color: var(--mantine-color-white);
   opacity: 1;

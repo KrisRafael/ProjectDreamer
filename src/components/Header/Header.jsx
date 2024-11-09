@@ -11,10 +11,7 @@ export function Header() {
 
   console.log(location)
 
-  // promenna isLoggedIn se bude cist z contextu,
-  // ktery bude uchovavat informace o prohlasenem uzivateli
   const {isAuth, logout} = useAuth()
-
 
   const handleLogout = (e) => {
     e.preventDefault()

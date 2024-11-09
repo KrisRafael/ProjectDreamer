@@ -14,11 +14,9 @@ export function UserStatus() {
         {isAuth 
         ? <>
             <p>Přihlášený uživatel: {user.user_metadata.firtName} {user.user_metadata.lastName}</p> 
-            {/* <button onClick={logout}>Odhlásit se</button> */}
          </>
         : <>
            <p>Jsi odhlášený</p>
-           {/* <button onClick={() => {navigate("/Login")}}>Přihlásit se</button> */}
           </>
         }
 

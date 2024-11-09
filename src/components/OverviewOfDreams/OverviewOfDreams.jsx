@@ -58,7 +58,7 @@ export function OverviewOfDreams() {
                 {overviews.map(overview => (
                   <li key={overview.id}>
                     <NavLink to={`${overview.id}`}>
-                      {overview.title}
+                    💭 {overview.title}
                     </NavLink>
                   </li>
                 ))}
