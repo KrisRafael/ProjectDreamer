@@ -8,9 +8,7 @@ import classes from './HeroPage.module.css'
 
 export function HeroPage() {
   const navigate = useNavigate()
-  const { user, isAuth } = useAuth();
-
-  
+ 
   const handleRegister = (e) => {
     e.preventDefault()
     navigate("/Register")

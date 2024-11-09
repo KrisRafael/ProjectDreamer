@@ -42,7 +42,6 @@
   height: 15vh;
   flex-direction: column;
   margin: 25px;
-  /* padding: 30px -80px; */
 }
 
 .flex {
@@ -62,13 +61,10 @@
   height: 95vh;
 }
 
-.detail {
-  /* display: flex; */
+/* .detail {
   flex: 1 1 auto;
-  /* width: 50vw; */
   height: 40vh;
-  border-radius: 10px;
-}
+} */
 
 .dreamList {
   list-style: none;
@@ -79,14 +75,12 @@
 
 .dreamList li {
   margin: 6px 30px;
-  /* background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); */
   border-bottom: 1px solid white;
   box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
   border-radius: 5px; 
   font-size: 1.1rem; 
   font-weight: bold;
   color: rgb(46, 7, 109);  
-  /* border: 1px solid rgba(19, 106, 138, 0.8); */
 }
 
 .dreamList a {
@@ -94,11 +88,7 @@
   padding: 10px 20px;
   gap: 5px;
   box-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
-  /* background: rgba(19, 106, 138, 0.8);
-  background: -webkit-linear-gradient(to left, rgba(38, 120, 113, 0.8), rgba(19, 106, 138, 1.8));
-  background: linear-gradient(to left, rgba(218, 240, 239, 0.4), rgba(19, 106, 138, 1.8)); */
   text-decoration: none; 
-  /* background: white; */
   color: rgb(46, 7, 109);  
 }
 
@@ -109,19 +99,79 @@
   color: rgb(66, 66, 177);  
 }
 
-
 .dreamList a.active {
   color: white;
 }
 
-.ContainerLabel {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 8px;
-  color: white;
-  font-weight: bold;
-  margin: 10px 0; 
-  width: 100%; 
-  padding: 10px; 
+@media (max-width: 768px) {
+  .mainContainer {
+    flex-direction: column; 
+    height: auto; 
+    width: auto;
+  }
+
+  .flex {
+    height: auto; 
+    padding: 10px;
+  }
+
+  .nav {
+    flex: 0 0 auto; 
+    height: auto; 
+    margin-bottom: 20px; 
+    padding: 40px;
+  }
+
+  .description {
+    width: 95vw; 
+    margin: 10px;
+    text-align: center;
+    height: 18vh;
+    padding: 50px 5px;
+  }
+
+  .gradientText {
+    margin: 0 20px; 
+    font-size: 1em; 
+  }
+
+  .dreamList li {
+    margin: 6px 10px; 
+  }
+
+  .dreamList a {
+    padding: 8px 15px; 
+  }
 }
+
+/* @media (max-width: 768px) {
+  .gradientText {
+      font-size: 24px; 
+  }
+  
+  .mainContainer{
+    display: flex;
+    margin: 0px;
+    width: 50vw;
+    height: 80vh;
+  }
+
+  .description{
+    width: 85vw;
+    height: 15vh;
+    flex-direction: column;
+    margin: 25px;
+  }
+
+  .flex {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 85vw;
+    height: 70vh;
+    margin-top: 70px;
+    padding: 10px;
+
+  }
+} */
+

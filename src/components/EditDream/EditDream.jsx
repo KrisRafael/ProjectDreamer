@@ -94,9 +94,11 @@ export function EditDream() {
         <div className={classes.editorContainer}>
           <h1 className={classes.spaceMonoBold}> ZDE VLOŽTE SVŮJ SEN</h1>
          
+         <div className={classes.spaceMonoRegular}>
           <div className={classes.prompt}>
 
           <MantineProvider theme={theme}>
+           
     <div className={classes.textInput}>
         <TextInput
             label="NÁZEV SNU:"
@@ -114,6 +116,7 @@ export function EditDream() {
             onChange={e => setType(e.target.value)}
         />
     </div>
+    
 </MantineProvider>
 
       <RichTextEditor editor={editor}>
@@ -161,9 +164,10 @@ export function EditDream() {
       <Button className={classes.button} onClick={handleButton}>
               Uložit sen
             </Button>
-       </div>
-       </div>
-      </div>
+         </div> 
+        </div>
+       </div> 
+      </div> 
     </>
   );
 }

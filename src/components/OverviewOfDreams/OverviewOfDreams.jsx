@@ -5,8 +5,6 @@ import { supabase } from "../../supabase/supabase";
 import { Outlet, Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from 'react';
 
-import { Accordion } from '@mantine/core';
-
 import classes from "./OverviewOfDreams.module.css";
 
 export function OverviewOfDreams() {
@@ -66,7 +64,7 @@ export function OverviewOfDreams() {
           }
         </nav>
 
-        <div className={classes.detail}>
+        <div className={classes.spaceMonoRegular} style={{ margin: "22px", flex: "1 1 auto" }}>
           <Outlet context={{onOverviewUpdate: handleOverviewsUpdate}} />
         </div>
       </div>
