@@ -13,6 +13,10 @@
   padding-top: calc(var(--mantine-spacing-xl) * 3);
   padding-bottom: calc(var(--mantine-spacing-xl) * 3);
 }
+
+.root > div {
+  text-align: left; 
+}
   
 .inner {
   overflow: hidden;

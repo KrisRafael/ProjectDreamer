@@ -119,15 +119,15 @@
     padding: 0.8em;
     /* margin-right: 4.8em; */
     align-items: center;
+    /* padding-left: 1.1em; */
   }
 
   .nav {
     flex: 0 0 auto; 
     height: auto; 
     margin-bottom: 20px; 
-    align-items: center;
-    /* padding: 1em; */
-    
+    /* align-items: center; */
+    padding-left: 1.1em; 
   }
 
   .description {
@@ -145,8 +145,7 @@
   }
 
   .dreamList li {
-    margin: 6px 10px; 
-   
+    margin: 6px 0px; 
   }
 
   .dreamList a {
