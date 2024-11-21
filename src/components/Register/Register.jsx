@@ -10,7 +10,6 @@ import backgroundImage from "../../assets/BckRegister.jpg";
 import {
 	TextInput,
 	PasswordInput,
-	Checkbox,
 	Anchor,
 	Paper,
 	Title,
@@ -75,7 +74,7 @@ export function Register() {
 
       {message && <p>{message}</p>}
 
-	  
+	  <div align="left"> 
 	  <TextInput label="E-mail" 
 		                type="email"
 						value={email}
@@ -100,6 +99,7 @@ export function Register() {
 		                type="text"
 						value={age}
 						onChange={e => setAge(e.target.value)} placeholder="Věk" required />
+		</div>
 
       <div className={classes.text}>
 	  <p>Pro dokončení registrace prosím potvrďte svou e-mailovou adresu kliknutím na odkaz, který jsme vám zaslali.</p>

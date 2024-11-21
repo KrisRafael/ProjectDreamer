@@ -107,22 +107,23 @@ body {
 
 .button {
     color: white;
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
-    border-radius: 5px; 
-    font-size: 1.1rem; 
-    font-weight: bold;
-    border: 1px solid white;
-    /* border: none; */  
-}
-
-.button:hover {
     box-shadow: 0 0 9px rgba(255, 255, 255, 0.5);
     background: rgba(19, 106, 138, 0.8);
     background: -webkit-linear-gradient(to left, rgba(38, 120, 113, 0.8), rgba(19, 106, 138, 1.8));
     background: linear-gradient(to left, rgba(218, 240, 239, 0.4), rgba(19, 106, 138, 1.8));
-    color: white;
+    border-radius: 5px; 
+    font-size: 1.1rem; 
+    font-weight: bold;
     border: 1px solid white;
+}
+
+.button:hover {
+    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    border-radius: 5px; 
+    color: white;
+    /* border: 1px solid white; */
+    border: none;  
 }
 
 @media (max-width: 480px) { 
@@ -150,13 +151,13 @@ body {
     }
 }
 
-/* @media (max-width: 768px) {
+@media (max-width: 768px) {
     .CarouseContainer {
         width: 100%; 
         margin: -50px auto; 
         height: auto;
     }
-} */
+}
 
 @media (min-width: 769px) {
     .MainContainer {

@@ -3,8 +3,8 @@ import backgroundImage from "../../assets/BckMainPage2.jpg";
 import {useNavigate} from 'react-router-dom'
 import { Accordion, Text, Card, Image, Button, Group } from '@mantine/core';
 
-// import { Carousel } from '@mantine/carousel';
-// import '@mantine/carousel/styles.css';
+import { Carousel } from '@mantine/carousel';
+import '@mantine/carousel/styles.css';
 
 import classes from "./MainPage.module.css";
 
@@ -16,10 +16,10 @@ export function MainPage() {
     e.preventDefault()
     navigate("/EditDream")
   }
-  // const handleButton = (e) => {
-  //   e.preventDefault()
-  //   navigate("/OverviewOfDreams")
-  // }
+  const handleButton = (e) => {
+    e.preventDefault()
+    navigate("/OverviewOfDreams")
+  }
 
   //Custom control label
   const groceries = [
@@ -42,7 +42,7 @@ export function MainPage() {
       <Background image={backgroundImage} />
       <div className={classes.BodyContainer}>
     
-    {/* <div> */}
+    <div>
     <Text className={classes.gradientText}
     >
       <h1 className={classes.spaceMonoBold}>
@@ -62,11 +62,11 @@ export function MainPage() {
       </Card.Section>
 
       <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500}>Sen o místě, kde se zastavil čas</Text>
+        <Text fw={500} align="left">Sen o místě, kde se zastavil čas</Text>
         {/* <Badge color="pink">On Sale</Badge> */}
       </Group>
 
-      <Text size="sm" c="dimmed">
+      <Text size="sm" c="dimmed" align="left">
         Zdál se mi nádherný sen, který mi zůstal v mysli ještě dlouho po probuzení. Cestovala jsem v cizí zemi a viděla jsem úchvátnou krajinu, kde byl vzduch tak svěží, překrásné květiny, příroda a divokost barev všude kolem. Jemný vánek lehce čechral nespoutanou divočinou, jako by sama tancovala po mě.
       </Text>
 
@@ -103,7 +103,7 @@ export function MainPage() {
       </Accordion>
       </div>
 
-    {/* </div>
+    </div>
    <div className={classes.CarouseContainer}>
    <Carousel 
       withIndicators
@@ -223,7 +223,7 @@ export function MainPage() {
   </Carousel.Slide>
  </Carousel>  
 
-   </div> */}
+   </div>
    </div>
     </>
   )

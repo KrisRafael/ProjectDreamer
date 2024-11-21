@@ -10,7 +10,6 @@ import backgroundImage from "../../assets/BckLogin.jpg";
 import {
 	TextInput,
 	PasswordInput,
-	Checkbox,
 	Anchor,
 	Paper,
 	Title,
@@ -61,7 +60,7 @@ export function Loggedin() {
         </Link>
       </Text>
 
-	  
+	  <div align="left">
         <TextInput label="E-mail" 
 		                type="email"
 						value={email}
@@ -71,6 +70,7 @@ export function Loggedin() {
 		                type="password"
 						value={password}
 						onChange={e => setPassword(e.target.value)} placeholder="Tvoje heslo" required mt="md" />
+		</div>
 
 		<div className={classes.ContainerButton}>
         <button className={classes.button} fullWidth mt="xl" type="submit">Přihlásit se</button>
