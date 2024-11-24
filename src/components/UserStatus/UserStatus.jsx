@@ -1,5 +1,6 @@
 import {useAuth} from "../../context/AuthContext";
 import {useNavigate} from "react-router-dom";
+import { Avatar } from '@mantine/core';
 
 import classes from "./UserStatus.module.css";
 
@@ -13,7 +14,10 @@ export function UserStatus() {
 
         {isAuth 
         ? <>
-            <p>Přihlášený uživatel: {user.user_metadata.firtName} {user.user_metadata.lastName}</p> 
+        <div className={classes.UserName}>
+       <Avatar variant="outline" radius="sm" color="white" src=""  />
+            <p>Uživatel: {user.user_metadata.firtName} {user.user_metadata.lastName} </p> 
+             </div>
          </>
         : <>
            <p>Jsi odhlášený</p>

@@ -1,5 +1,15 @@
-.User-Status{
+.UserStatus{
     color: white;
-    border: 1px solid white;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); 
+    /* border-top: 2px solid rgba(255, 255, 255, 0.5); */
+    /* border-radius: 4px; */
     padding: 10px 20px;   
+}
+
+.UserName{
+    display: flex;
+    gap: 10px;
+    justify-content: center; 
+    align-items: center;
+    margin: -2px;
 }
