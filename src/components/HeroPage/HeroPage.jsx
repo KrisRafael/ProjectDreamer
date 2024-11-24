@@ -1,5 +1,7 @@
-import Background from "../Background/Background";
-import backgroundImage from "../../assets/BckHeroPage2.jpg";
+// import Background from "../Background/Background";
+// import backgroundImage from "../../assets/BckHeroPage2.jpg";
+import BackgroundVideo from "../Backgroundvideo/backgroundvideo";
+import BackgroundVideoFile from "../../assets/ArrowBackground.mp4";
 import {useAuth} from "../../context/AuthContext";
 import {useNavigate} from 'react-router-dom'
 import { Container, Title, Text, Button } from '@mantine/core';
@@ -16,7 +18,8 @@ export function HeroPage() {
 
   return (
     <>
-      <Background image={backgroundImage} />
+      <BackgroundVideo video={BackgroundVideoFile} /> 
+      {/* <Background image={backgroundImage} style={{ opacity: 0.5 }} /> */}
      
  <div className={classes.root}>
       <Container size="lg">

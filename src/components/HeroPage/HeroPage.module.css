@@ -30,11 +30,11 @@
 }
  
 /* .image {
-    @media (max-width: $mantine-breakpoint-md) {
-      display: none;
-    }
+  position: relative;
+  opacity: 0.2; 
+  z-index: -1800;
 } */
-  
+
 .content {
   padding-top: calc(var(--mantine-spacing-xl) * 1);
   padding-bottom: calc(var(--mantine-spacing-xl) * 0);
