@@ -55,7 +55,7 @@ export function HeroPage() {
               gradient={{ from: 'dodgerblue', to: 'green' }}
               size="xl"
               className={classes.control}
-              mt={40}
+              mt={50}
             >
               Založit účet
             </Button>
