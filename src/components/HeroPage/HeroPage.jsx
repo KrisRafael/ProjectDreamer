@@ -1,6 +1,6 @@
 // import Background from "../Background/Background";
 // import backgroundImage from "../../assets/BckHeroPage2.jpg";
-import BackgroundVideo from "../Backgroundvideo/backgroundvideo";
+import BackgroundVideo from "../Backgroundvideo/Backgroundvideo";
 import BackgroundVideoFile from "../../assets/ArrowBackground.mp4";
 import {useAuth} from "../../context/AuthContext";
 import {useNavigate} from 'react-router-dom'
