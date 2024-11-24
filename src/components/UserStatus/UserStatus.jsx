@@ -15,7 +15,7 @@ export function UserStatus() {
         {isAuth 
         ? <>
         <div className={classes.UserName}>
-       <Avatar variant="outline" radius="sm" color="white" src=""  />
+       <Avatar variant="outline" radius="sm" color="white" src="" />
             <p>Uživatel: {user.user_metadata.firtName} {user.user_metadata.lastName} </p> 
              </div>
          </>
