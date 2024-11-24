@@ -111,7 +111,7 @@ export function EditDream() {
         <NativeSelect
             mt="md"
             label="TYP SNU:"
-            data={['Normální sen', 'Živý sen', 'Hezký sen', 'Noční můra', 'Astralní cestování', 'OBE', 'Pocity']}
+            data={['Normální sen', 'Živý sen', 'Hezký sen', 'Noční můra', 'Pocity']}
             value={type}
             onChange={e => setType(e.target.value)}
         />
