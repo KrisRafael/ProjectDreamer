@@ -8,8 +8,8 @@
 .backgroundVideo {
   /* display: block; */
   position: absolute;
-  width: auto;
-  height: 150vh;
+  width: 100%;
+  height: auto;
   left: 0;
   top: 0;
   /* width: 100vw;

@@ -94,21 +94,24 @@
     /* background-color: #007bff; */
     /* background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%); */
     /* background-image: linear-gradient(230deg,#2af598 0%, #009efd 100%); */
-    box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+    /* box-shadow: 0 0 4px rgba(255, 255, 255, 0.1); */
     border-radius: 2px; 
     border-bottom: 2px solid rgba(255, 255, 255, 0.5); 
     border-top: 2px solid rgba(255, 255, 255, 0.5); 
     font-size: 0.95rem;
     font-weight: bold;
-    padding: 0.3rem 0.3rem;
+    padding: 0.7rem 0.3rem;
+    width: 150px;
 }
 
 .navButton:hover {
-    /* background-color: aquamarine; */
-    background-image: linear-gradient(15deg, #13547a 0%, #80d0c7 100%);
-    /* background: rgb(69, 179, 193); */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     color: white;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.1);
+    background: rgba(19, 106, 138, 0.2);
+    background: -webkit-linear-gradient(to left, rgba(38, 120, 113, 0.6), rgba(19, 106, 138, 1.3));
+    background: linear-gradient(to left, rgba(218, 240, 239, 0.4), rgba(19, 106, 138, 1));
+    border-bottom: 2px solid rgba(255, 255, 255, 0.5); 
+    border-top: 2px solid rgba(255, 255, 255, 0.5); 
 }
 
 @media (max-width: 600px) {
