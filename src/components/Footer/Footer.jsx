@@ -6,7 +6,7 @@ export function Footer() {
     return(
       <div className={classes.footerContainer}>
           <footer className={classes.footer}>
-            <p style={{fontWeight: "bold", fontSize: "13px",    color: "dodgerblue", marginLeft: "25px"}}>© 2024      Copyright by Kris</p>
+            <p className={classes.copyright} style={{fontWeight: "bold", fontSize: "13px",    color: "dodgerblue", marginLeft: "25px"}}>© 2024      Copyright by Kris</p>
             <div className={classes.icons}>
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className={classes.iconLink}>
                         <IconBrandFacebook className={classes.icon} />
