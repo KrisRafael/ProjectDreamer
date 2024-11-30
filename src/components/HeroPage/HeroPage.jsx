@@ -1,12 +1,12 @@
 // import Background from "../Background/Background";
 // import backgroundImage from "../../assets/BckHeroPage2.jpg";
 import BackgroundVideo from "../Backgroundvideo/Backgroundvideo";
-import BackgroundVideoFile from "../../assets/ArrowBackground.mp4";
-import {useAuth} from "../../context/AuthContext";
+import BackgroundVideoFile from "../../assets/violetbackground.mp4";
+// import {useAuth} from "../../context/AuthContext";
 import {useNavigate} from 'react-router-dom'
 import { Container, Title, Text, Button } from '@mantine/core';
 
-import classes from './HeroPage.module.css'
+import classes from './HeroPage.module.css';
 
 export function HeroPage() {
   const navigate = useNavigate()
