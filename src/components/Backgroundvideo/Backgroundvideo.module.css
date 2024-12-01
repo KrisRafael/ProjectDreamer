@@ -39,15 +39,24 @@
         height: 100%; 
         left: 0;
         top: 0;
+        z-index: -1;
 
     }
 }
-/* @media (min-width: 769px) {
+
+@media (max-width: 1200px) {
     .backgroundVideo {
-        width: 100vw; 
-        height: 100vh; 
+        position: fixed;
+        background-size: cover;
+        background-position: center;
+        width: auto; 
+        height: 100%; 
+        left: 0;
+        top: 0;
+        z-index: -1;
+
     }
-} */
+}
 
 /* .image {
   position: relative;

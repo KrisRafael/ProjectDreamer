@@ -71,6 +71,8 @@
         justify-content: center;
         top: 45%; 
         left: 50%;
+        margin-bottom: 40px;
+        margin-top: 50px;
     }
 }
 
@@ -79,7 +81,8 @@
         margin-top: 20vh;
         width: 100%; 
         height: auto; 
-        /* height: 50vh; */
+        margin-bottom: 30px;
+        margin-top: 30px;
     }
 }
 

@@ -98,3 +98,14 @@
   box-shadow: 0 0 10px white(247, 250, 250, 0.5);
   color: indigo;
 }
+/* 
+@media (max-width: 768px) {
+  .root  {
+    margin: 50px 10px;
+    font-size: 8vh;
+    padding: 20px;
+    padding-top: -90px;
+    padding-bottom: 70px;
+    margin: 40px -10px;
+  }
+} */
