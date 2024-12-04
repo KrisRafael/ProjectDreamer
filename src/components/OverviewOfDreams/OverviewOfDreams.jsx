@@ -1,5 +1,5 @@
 import Background from '../Background/Background';
-import backgroundImage from "../../assets/BckOverview.jpg";
+import backgroundImage from "../../assets/BckOverview4.jpg";
 import { supabase } from "../../supabase/supabase";
 
 import { Outlet, Link, NavLink } from "react-router-dom";
@@ -56,7 +56,7 @@ export function OverviewOfDreams() {
                 {overviews.map(overview => (
                   <li key={overview.id}>
                     <NavLink to={`${overview.id}`}>
-                    💭 {overview.title}
+                    ✘ {overview.title}
                     </NavLink>
                   </li>
                 ))}
