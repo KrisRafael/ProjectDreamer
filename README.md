@@ -24,13 +24,14 @@ This React application utilizes the Mantine UI library for its visual components
 
 For future iterations, I plan to explore styling solutions like SASS, Bootstrap or Tailwind CSS, along with integrating AI functionalities. I'd like to add more features.
 
+## Contact
+
+https://www.linkedin.com/in/kristyna-krhovjakova-622892a2/
+
 ## Web
 https://dream-edit.netlify.app/
 Aplication is writen in Czech language
 
-## Contact
-
-https://www.linkedin.com/in/kristyna-krhovjakova-622892a2/
 
 ![Screenshot of the application](screenshotproject2.png)
 
