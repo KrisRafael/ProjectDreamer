@@ -6,7 +6,7 @@ This project showcases my web development skills through "Dream Editing Journali
 
 This website simulates the online presence of a journalist specializing in dream interpretation and analysis.  It features Dream journaling by type, including an overview of all dreams, a portfolio section, user authentication.  The design aims for a clean, professional and artistic look that's both visually appealing and easy to navigate.
 
-![Screenshot of the application](ScreenshotProject1.png)
+![Screenshot of the application](screenshotproject1.png)
 
 ## Technologies Used
 
@@ -32,6 +32,6 @@ Aplication is writen in Czech language
 
 https://www.linkedin.com/in/kristyna-krhovjakova-622892a2/
 
-![Screenshot of the application](ScreenshotProject2.png)
+![Screenshot of the application](screenshotproject2.png)
 
-![Screenshot of the application](ScreenshotProject3.png)
+![Screenshot of the application](screenshotproject3.png)
