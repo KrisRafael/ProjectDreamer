@@ -26,8 +26,12 @@ For future iterations, I plan to explore styling solutions like SASS, Bootstrap 
 
 ## Web
 https://dream-edit.netlify.app/
-Webside is write in Czech language
+Aplication is writen in Czech language
 
 ## Contact
 
 https://www.linkedin.com/in/kristyna-krhovjakova-622892a2/
+
+![Screenshot of the application](ScreenshotProject2.png)
+
+![Screenshot of the application](ScreenshotProject3.png)

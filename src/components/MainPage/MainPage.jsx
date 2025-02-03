@@ -93,7 +93,8 @@ export function MainPage() {
               >
                 VYTVOŘ SEN
               </Button>
-            </Card> //----- End Card -----
+            </Card> 
+            {/* ----- End Card ----- */}
           </div>
 
           <div className={classes.ContainerLabel}>
@@ -101,10 +102,12 @@ export function MainPage() {
               defaultValue="Apples">
               {items}
             </Accordion>
-          </div> //---- End Custom control label -----
-
+          </div> 
         </div>
-        <div className={classes.CarouseContainer}> //------- Start Carousel ------
+         {/* ---- End Custom control label ----- */}
+
+        {/* ------- Start Carousel ------ */}
+        <div className={classes.CarouseContainer}>
           <Carousel
             withIndicators
             height={200}
