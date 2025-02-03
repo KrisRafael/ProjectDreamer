@@ -1,14 +1,17 @@
 # Dream Editing Journalist - Personal Web Development Project
 
-This project showcases my web development skills through "Dream Editing Journalist" website.  It's designed to demonstrate my proficiency in [JavaScript, React, Node.js, HTML, CSS, RWD, Vite and Supabase].
+This project showcases my web development skills through "Dream Editing Journalist" website.  It's designed to demonstrate my proficiency in [JavaScript, React, Node.js, HTML, CSS, RWD, Vite and Supabase]. 
 
 ## Description
 
 This website simulates the online presence of a journalist specializing in dream interpretation and analysis.  It features Dream journaling by type, including an overview of all dreams, a portfolio section, user authentication.  The design aims for a clean, professional and artistic look that's both visually appealing and easy to navigate.
 
+![Screenshot of the application](ScreenshotProject1.png)
+
 ## Technologies Used
 
-* Frontend: [ Vite.js, React, Typescript, JavaScript, HTML5, CSS, RWD, Query ]
+* Frontend: [ Vite.js, React, Typescript, JavaScript, HTML5, CSS,  
+  Responsive Web Design (RWD) using CSS media queries ]
 * Backend: [ Node.js, Json, Supabase ]
 * Other: [ Netlify, UI Mantine ]
 
@@ -19,10 +22,11 @@ This React application utilizes the Mantine UI library for its visual components
 
 ## Future Improvements
 
-For future iterations, I plan to explore styling solutions like SASS, Bootstrap, or Tailwind CSS, along with integrating AI functionalities. I'd like to add more features.
+For future iterations, I plan to explore styling solutions like SASS, Bootstrap or Tailwind CSS, along with integrating AI functionalities. I'd like to add more features.
 
-##Web
+## Web
 https://dream-edit.netlify.app/
+Webside is write in Czech language
 
 ## Contact
 
