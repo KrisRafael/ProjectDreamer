@@ -17,25 +17,25 @@ async function register(email, password, firstName, lastName, age) {
         email,
         password,
         options: {
-          data: {
-            firstName,
-            lastName,
-            age,
-          }
+            data: {
+                firstName,
+                lastName,
+                age,
+            }
         }
-      })
+    })
 }
 
-export function AuthProvider({children}) {
+export function AuthProvider({ children }) {
     const [user, setUser] = useState(null)
     const [isAuth, setIsAuth] = useState(false)
 
     useEffect(
         () => {
-            const {data} = supabase.auth.onAuthStateChange((event, session) => {
+            const { data } = supabase.auth.onAuthStateChange((event, session) => {
                 if (event === "SIGNED_IN") {
-                  setIsAuth(true) 
-                  setUser(session.user)
+                    setIsAuth(true)
+                    setUser(session.user)
                 }
                 if (event === "SIGNED_OUT") {
                     setIsAuth(false)
@@ -50,14 +50,14 @@ export function AuthProvider({children}) {
         []
     )
 
-    return(
+    return (
         <AuthContext.Provider value={{
             user,
             isAuth,
             login,
             logout,
             register,
-            }}>
+        }}>
             {children}
         </AuthContext.Provider>
     )

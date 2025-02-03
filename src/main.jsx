@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
-import {AuthProvider} from "./context/AuthContext.jsx";
+import { AuthProvider } from "./context/AuthContext.jsx";
 
 import '@mantine/core/styles.css';
 import '@mantine/tiptap/styles.css';
@@ -21,29 +21,29 @@ import Login from "./components/Login/Login.jsx";
 import Register from "./components/Register/Register.jsx";
 
 createRoot(document.getElementById('root')).render(
-<StrictMode>
- <AuthProvider>
-  <MantineProvider withGlobalStyles withNormalizeCSS>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App />}>
-            <Route index element={<HeroPage />} />
+  <StrictMode>
+    <AuthProvider>
+      <MantineProvider withGlobalStyles withNormalizeCSS>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<App />}>
+              <Route index element={<HeroPage />} />
 
-            <Route element={<AuthRoute />}>
-             <Route path="MainPage" element={<MainPage />} />
-             <Route path="EditDream" element={<EditDream />} />
+              <Route element={<AuthRoute />}>
+                <Route path="MainPage" element={<MainPage />} />
+                <Route path="EditDream" element={<EditDream />} />
 
-             <Route path="OverviewOfDreams" element={<OverviewOfDreams />}>
-             <Route path=":dreamId" element={<DreamDetail />} />
-             </Route>
-             
+                <Route path="OverviewOfDreams" element={<OverviewOfDreams />}>
+                  <Route path=":dreamId" element={<DreamDetail />} />
+                </Route>
+
+              </Route>
+              <Route path="Login" element={<Login />} />
+              <Route path="Register" element={<Register />} />
             </Route>
-            <Route path="Login" element={<Login />} />
-            <Route path="Register" element={<Register />} />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </MantineProvider>
-  </AuthProvider>
-</StrictMode>,
+          </Routes>
+        </BrowserRouter>
+      </MantineProvider>
+    </AuthProvider>
+  </StrictMode>,
 )

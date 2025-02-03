@@ -1,6 +1,6 @@
 import Background from '../Background/Background';
 import backgroundImage from "../../assets/BckEditDream.jpg";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { supabase } from "../../supabase/supabase";
 
 import { Button } from '@mantine/core';
@@ -12,7 +12,7 @@ import Highlight from '@tiptap/extension-highlight';
 import StarterKit from '@tiptap/starter-kit';
 import Underline from '@tiptap/extension-underline';
 import TextAlign from '@tiptap/extension-text-align';
-import {useState} from "react";
+import { useState } from "react";
 
 import classes from "./EditDream.module.css";
 
@@ -58,7 +58,7 @@ export function EditDream() {
 
   const handleButton = async (e) => {
     e.preventDefault()
-    const {error} = await supabase.from('dreams').insert({
+    const { error } = await supabase.from('dreams').insert({
       title,
       type,
       content,
@@ -83,9 +83,9 @@ export function EditDream() {
     content,
     onUpdate
   });
- function onUpdate ({editor}){
-  setContent(editor.getHTML())
- }
+  function onUpdate({ editor }) {
+    setContent(editor.getHTML())
+  }
   return (
     <>
       <Background image={backgroundImage} />
@@ -93,81 +93,81 @@ export function EditDream() {
       <div className={classes.container}>
         <div className={classes.editorContainer}>
           <h1 className={classes.spaceMonoBold}> ZDE VLOŽTE SVŮJ SEN</h1>
-         
-         <div className={classes.spaceMonoRegular}>
-          <div className={classes.prompt}>
 
-          <MantineProvider theme={theme}>
-           
-    <div className={classes.textInput}>
-        <TextInput
-            label="NÁZEV SNU:"
-            placeholder="Tady napiště název svého snu"
-            value={title}
-            onChange={e => setTitle(e.target.value)}
-        />
-    </div>
-    <div className={classes.textInput}>
-        <NativeSelect
-            mt="md"
-            label="TYP SNU:"
-            data={['Normální sen', 'Živý sen', 'Hezký sen', 'Noční můra', 'Pocity']}
-            value={type}
-            onChange={e => setType(e.target.value)}
-        />
-    </div>
-    
-</MantineProvider>
+          <div className={classes.spaceMonoRegular}>
+            <div className={classes.prompt}>
 
-      <RichTextEditor editor={editor}>
-        <RichTextEditor.Toolbar sticky stickyOffset={60}>
-          <RichTextEditor.ControlsGroup>
-            <RichTextEditor.Bold />
-            <RichTextEditor.Italic />
-            <RichTextEditor.Underline />
-            <RichTextEditor.Strikethrough />
-            <RichTextEditor.ClearFormatting />
-            <RichTextEditor.Highlight />
-            <RichTextEditor.Code />
-          </RichTextEditor.ControlsGroup>
+              <MantineProvider theme={theme}>
 
-          <RichTextEditor.ControlsGroup>
-            <RichTextEditor.H1 />
-            <RichTextEditor.H2 />
-            <RichTextEditor.H3 />
-            <RichTextEditor.H4 />
-          </RichTextEditor.ControlsGroup>
+                <div className={classes.textInput}>
+                  <TextInput
+                    label="NÁZEV SNU:"
+                    placeholder="Tady napiště název svého snu"
+                    value={title}
+                    onChange={e => setTitle(e.target.value)}
+                  />
+                </div>
+                <div className={classes.textInput}>
+                  <NativeSelect
+                    mt="md"
+                    label="TYP SNU:"
+                    data={['Normální sen', 'Živý sen', 'Hezký sen', 'Noční můra', 'Pocity']}
+                    value={type}
+                    onChange={e => setType(e.target.value)}
+                  />
+                </div>
 
-          <RichTextEditor.ControlsGroup>
-            <RichTextEditor.Blockquote />
-            <RichTextEditor.Hr />
-            <RichTextEditor.BulletList />
-            <RichTextEditor.OrderedList />
-          </RichTextEditor.ControlsGroup>
+              </MantineProvider>
 
-          <RichTextEditor.ControlsGroup>
-            <RichTextEditor.AlignLeft />
-            <RichTextEditor.AlignCenter />
-            <RichTextEditor.AlignJustify />
-            <RichTextEditor.AlignRight />
-          </RichTextEditor.ControlsGroup>
+              <RichTextEditor editor={editor}>
+                <RichTextEditor.Toolbar sticky stickyOffset={60}>
+                  <RichTextEditor.ControlsGroup>
+                    <RichTextEditor.Bold />
+                    <RichTextEditor.Italic />
+                    <RichTextEditor.Underline />
+                    <RichTextEditor.Strikethrough />
+                    <RichTextEditor.ClearFormatting />
+                    <RichTextEditor.Highlight />
+                    <RichTextEditor.Code />
+                  </RichTextEditor.ControlsGroup>
 
-          <RichTextEditor.ControlsGroup>
-            <RichTextEditor.Undo />
-            <RichTextEditor.Redo />
-          </RichTextEditor.ControlsGroup>
-        </RichTextEditor.Toolbar>
+                  <RichTextEditor.ControlsGroup>
+                    <RichTextEditor.H1 />
+                    <RichTextEditor.H2 />
+                    <RichTextEditor.H3 />
+                    <RichTextEditor.H4 />
+                  </RichTextEditor.ControlsGroup>
 
-        <RichTextEditor.Content />
-      </RichTextEditor>
+                  <RichTextEditor.ControlsGroup>
+                    <RichTextEditor.Blockquote />
+                    <RichTextEditor.Hr />
+                    <RichTextEditor.BulletList />
+                    <RichTextEditor.OrderedList />
+                  </RichTextEditor.ControlsGroup>
 
-      <Button className={classes.button} onClick={handleButton}>
-              Uložit sen
-            </Button>
-         </div> 
+                  <RichTextEditor.ControlsGroup>
+                    <RichTextEditor.AlignLeft />
+                    <RichTextEditor.AlignCenter />
+                    <RichTextEditor.AlignJustify />
+                    <RichTextEditor.AlignRight />
+                  </RichTextEditor.ControlsGroup>
+
+                  <RichTextEditor.ControlsGroup>
+                    <RichTextEditor.Undo />
+                    <RichTextEditor.Redo />
+                  </RichTextEditor.ControlsGroup>
+                </RichTextEditor.Toolbar>
+
+                <RichTextEditor.Content />
+              </RichTextEditor>
+
+              <Button className={classes.button} onClick={handleButton}>
+                Uložit sen
+              </Button>
+            </div>
+          </div>
         </div>
-       </div> 
-      </div> 
+      </div>
     </>
   );
 }

@@ -1,6 +1,6 @@
 import Background from "../Background/Background";
 import backgroundImage from "../../assets/BckMainPage2.jpg";
-import {useNavigate} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Accordion, Text, Card, Image, Button, Group } from '@mantine/core';
 
 import { Carousel } from '@mantine/carousel';
@@ -36,195 +36,195 @@ export function MainPage() {
       <Accordion.Panel>{item.description}</Accordion.Panel>
     </Accordion.Item>
   ));
- 
+
   return (
     <>
       <Background image={backgroundImage} />
       <div className={classes.BodyContainer}>
-    
-    <div>
-    <Text className={classes.gradientText}
-    >
-      <h1 className={classes.spaceMonoBold}>
-        ZDE ZAČÍNÁ TVŮJ SNOVÝ ZÁŽITEK</h1>
-    </Text>
-    </div>
-    
-  <div className={classes.MainContainer} >
-    <div className={classes.CardContainer} >
-       <Card className={classes.Card} shadow="sm" padding="lg" radius="md" withBorder>
-        <Card.Section component="a" href="https://mantine.dev/">
-        <Image className={classes.CardEffect}
-          src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
-          height={160}
-          alt="Norway"
-        />
-      </Card.Section>
 
-      <Group justify="space-between" mt="md" mb="xs">
-        <Text fw={500} align="left">Sen o místě, kde se zastavil čas</Text>
-        {/* <Badge color="pink">On Sale</Badge> */}
-      </Group>
+        <div>
+          <Text className={classes.gradientText}
+          >
+            <h1 className={classes.spaceMonoBold}>
+              ZDE ZAČÍNÁ TVŮJ SNOVÝ ZÁŽITEK</h1>
+          </Text>
+        </div>
 
-      <Text size="sm" c="dimmed" align="left">
-        Zdál se mi nádherný sen, který mi zůstal v mysli ještě dlouho po probuzení. Cestovala jsem v cizí zemi a viděla jsem úchvátnou krajinu, kde byl vzduch tak svěží, překrásné květiny, příroda a divokost barev všude kolem. Jemný vánek lehce čechral nespoutanou divočinou, jako by sama tancovala po mě.
-      </Text>
+        <div className={classes.MainContainer} >
+          <div className={classes.CardContainer} >
+            <Card className={classes.Card} shadow="sm" padding="lg" radius="md" withBorder>
+              <Card.Section component="a" href="https://mantine.dev/">
+                <Image className={classes.CardEffect}
+                  src="https://raw.githubusercontent.com/mantinedev/mantine/master/.demo/images/bg-8.png"
+                  height={160}
+                  alt="Norway"
+                />
+              </Card.Section>
 
-      <Button
-  onClick={handleEditdream}
-  variant="gradient"
-  fullWidth
-  mt="md"
-  radius="md"
-  style={{
-    boxShadow: '0 0 9px rgba(255, 255, 255, 0.5)',
-    background: 'linear-gradient(to left, rgba(38, 120, 113, 0.4), rgba(19, 106, 138, 0.8))',
-    borderRadius: '5px',
-    color: 'white',
-  }}
-  onMouseEnter={(e) => {
-    e.currentTarget.style.backgroundImage = 'linear-gradient(15deg, #13547a 0%, #80d0c7 100%)';
-    e.currentTarget.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.5)';
-  }}
-  onMouseLeave={(e) => {
-    e.currentTarget.style.backgroundImage = '';
-    e.currentTarget.style.boxShadow = '0 0 9px rgba(255, 255, 255, 0.5)';
-  }}
->
-  VYTVOŘ SEN
-</Button>
-    </Card>
-    </div>
-    
-   <div className={classes.ContainerLabel}>
-    <Accordion 
-       defaultValue="Apples">
-        {items}
-      </Accordion>
+              <Group justify="space-between" mt="md" mb="xs">
+                <Text fw={500} align="left">Sen o místě, kde se zastavil čas</Text>
+                {/* <Badge color="pink">On Sale</Badge> */}
+              </Group>
+
+              <Text size="sm" c="dimmed" align="left">
+                Zdál se mi nádherný sen, který mi zůstal v mysli ještě dlouho po probuzení. Cestovala jsem v cizí zemi a viděla jsem úchvátnou krajinu, kde byl vzduch tak svěží, překrásné květiny, příroda a divokost barev všude kolem. Jemný vánek lehce čechral nespoutanou divočinou, jako by sama tancovala po mě.
+              </Text>
+
+              <Button
+                onClick={handleEditdream}
+                variant="gradient"
+                fullWidth
+                mt="md"
+                radius="md"
+                style={{
+                  boxShadow: '0 0 9px rgba(255, 255, 255, 0.5)',
+                  background: 'linear-gradient(to left, rgba(38, 120, 113, 0.4), rgba(19, 106, 138, 0.8))',
+                  borderRadius: '5px',
+                  color: 'white',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundImage = 'linear-gradient(15deg, #13547a 0%, #80d0c7 100%)';
+                  e.currentTarget.style.boxShadow = '0 0 10px rgba(255, 255, 255, 0.5)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundImage = '';
+                  e.currentTarget.style.boxShadow = '0 0 9px rgba(255, 255, 255, 0.5)';
+                }}
+              >
+                VYTVOŘ SEN
+              </Button>
+            </Card> //----- End Card -----
+          </div>
+
+          <div className={classes.ContainerLabel}>
+            <Accordion
+              defaultValue="Apples">
+              {items}
+            </Accordion>
+          </div> //---- End Custom control label -----
+
+        </div>
+        <div className={classes.CarouseContainer}> //------- Start Carousel ------
+          <Carousel
+            withIndicators
+            height={200}
+            slideSize="33.333333%"
+            slideGap="md"
+            loop
+            align="start"
+            slidesToScroll={3}
+          >
+            <Carousel.Slide>
+              <div style={{ position: 'relative', height: 200 }}>
+                <img
+                  className={classes.hoverEffect}
+                  src="/ImagesCarousel/carousel1.jpg"
+                  alt="Sen1"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '8px',
+                    margin: '0'
+                  }}
+                />
+                <div className={classes.title}>
+                  Název snu
+                </div>
+                <Button
+                  className={classes.button}
+                  style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }}
+                  onClick={handleButton}
+                >
+                  Otevřít sen
+                </Button>
+              </div>
+            </Carousel.Slide>
+
+            <Carousel.Slide>
+              <div style={{ position: 'relative', height: 200 }}>
+                <img
+                  className={classes.hoverEffect}
+                  src="/ImagesCarousel/carousel4.jpg"
+                  alt="Sen1"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '8px',
+                    margin: '0'
+                  }}
+                />
+                <div className={classes.title}>
+                  Název snu
+                </div>
+                <Button
+                  className={classes.button}
+                  style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }}
+                  onClick={handleButton}
+                >
+                  Otevřít sen
+                </Button>
+              </div>
+            </Carousel.Slide>
+
+            <Carousel.Slide>
+              <div style={{ position: 'relative', height: 200 }}>
+                <img
+                  className={classes.hoverEffect}
+                  src="/ImagesCarousel/carousel2.jpg"
+                  alt="Sen1"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '8px',
+                    margin: '0'
+                  }}
+                />
+                <div className={classes.title}>
+                  Název snu
+                </div>
+                <Button
+                  className={classes.button}
+                  style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }}
+                  onClick={handleButton}
+                >
+                  Otevřít sen
+                </Button>
+              </div>
+            </Carousel.Slide>
+
+            <Carousel.Slide>
+              <div style={{ position: 'relative', height: 200 }}>
+                <img
+                  className={classes.hoverEffect}
+                  src="/ImagesCarousel/carousel3.jpg"
+                  alt="Sen1"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: '8px',
+                    margin: '0'
+                  }}
+                />
+                <div className={classes.title}>
+                  Název snu
+                </div>
+                <Button
+                  className={classes.button}
+                  style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }}
+                  onClick={handleButton}
+                >
+                  Otevřít sen
+                </Button>
+              </div>
+            </Carousel.Slide>
+          </Carousel>
+
+        </div>
       </div>
-
-    </div>
-   <div className={classes.CarouseContainer}>
-   <Carousel 
-      withIndicators
-      height={200}
-      slideSize="33.333333%"
-      slideGap="md"
-      loop
-      align="start"
-      slidesToScroll={3}
-    >
-  <Carousel.Slide>
-    <div style={{ position: 'relative', height: 200 }}>
-        <img 
-            className={classes.hoverEffect} 
-            src="/ImagesCarousel/carousel1.jpg" 
-            alt="Sen1" 
-            style={{ 
-                width: '100%', 
-                height: '100%', 
-                objectFit: 'cover', 
-                borderRadius: '8px', 
-                margin: '0' 
-            }} 
-        /> 
-        <div className={classes.title}>
-            Název snu
-        </div>
-        <Button 
-            className={classes.button}
-            style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }} 
-            onClick={handleButton}
-        >
-            Otevřít sen
-        </Button>
-    </div>
-  </Carousel.Slide>
-
-  <Carousel.Slide>
-    <div style={{ position: 'relative', height: 200 }}>
-        <img 
-            className={classes.hoverEffect} 
-            src="/ImagesCarousel/carousel4.jpg" 
-            alt="Sen1" 
-            style={{ 
-                width: '100%', 
-                height: '100%', 
-                objectFit: 'cover', 
-                borderRadius: '8px', 
-                margin: '0' 
-            }} 
-        /> 
-        <div className={classes.title}>
-            Název snu
-        </div>
-        <Button 
-            className={classes.button}
-            style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }} 
-            onClick={handleButton}
-        >
-            Otevřít sen
-        </Button>
-    </div>
-  </Carousel.Slide>
-
-  <Carousel.Slide>
-    <div style={{ position: 'relative', height: 200 }}>
-        <img 
-            className={classes.hoverEffect} 
-            src="/ImagesCarousel/carousel2.jpg" 
-            alt="Sen1" 
-            style={{ 
-                width: '100%', 
-                height: '100%', 
-                objectFit: 'cover', 
-                borderRadius: '8px', 
-                margin: '0' 
-            }} 
-        /> 
-        <div className={classes.title}>
-            Název snu
-        </div>
-        <Button 
-            className={classes.button}
-            style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }} 
-            onClick={handleButton}
-        >
-            Otevřít sen
-        </Button>
-    </div>
-  </Carousel.Slide>
-
-  <Carousel.Slide>
-    <div style={{ position: 'relative', height: 200 }}>
-        <img 
-            className={classes.hoverEffect} 
-            src="/ImagesCarousel/carousel3.jpg" 
-            alt="Sen1" 
-            style={{ 
-                width: '100%', 
-                height: '100%', 
-                objectFit: 'cover', 
-                borderRadius: '8px', 
-                margin: '0' 
-            }} 
-        /> 
-        <div className={classes.title}>
-            Název snu
-        </div>
-        <Button 
-            className={classes.button}
-            style={{ position: 'absolute', bottom: 20, left: '50%', transform: 'translateX(-50%)' }} 
-            onClick={handleButton}
-        >
-            Otevřít sen
-        </Button>
-    </div>
-  </Carousel.Slide>
- </Carousel>  
-
-   </div>
-   </div>
     </>
   )
 }

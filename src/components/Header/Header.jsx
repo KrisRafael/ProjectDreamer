@@ -1,5 +1,5 @@
-import {Link, useNavigate, useLocation} from 'react-router-dom'
-import {useAuth} from "../../context/AuthContext";
+import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { useAuth } from "../../context/AuthContext";
 
 import UserStatus from '../UserStatus/UserStatus'
 
@@ -11,7 +11,7 @@ export function Header() {
 
   console.log(location)
 
-  const {isAuth, logout} = useAuth()
+  const { isAuth, logout } = useAuth()
 
   const handleLogout = (e) => {
     e.preventDefault()
@@ -19,7 +19,7 @@ export function Header() {
     navigate("/")
   }
 
-  return(
+  return (
     <>
       <header className={classes.header}>
         <div className={classes.circleContainer}>
@@ -31,7 +31,7 @@ export function Header() {
         <nav className={classes.navbar}>
           {isAuth &&
             <>
-             <Link to="/MainPage" className={classes.navButton}>HLAVNÍ STRÁNKA</Link>
+              <Link to="/MainPage" className={classes.navButton}>HLAVNÍ STRÁNKA</Link>
               <Link to="/EditDream" className={classes.navButton}>VLOŽIT SEN</Link>
               <Link to="/OverviewOfDreams" className={classes.navButton}>PŘEHLED SNŮ</Link>
               <a href="#" onClick={handleLogout} className={classes.navButton}>ODHLÁSIT SE</a>
@@ -40,7 +40,7 @@ export function Header() {
             </>
           }
 
-          { (!isAuth && location.pathname === '/') &&
+          {(!isAuth && location.pathname === '/') &&
             <>
               <Link to="/Login" className={classes.navButton}>PŘIHLÁSIT SE</Link>
               <Link to="/Register" className={classes.navButton}>REGISTROVAT SE</Link>
